@@ -24,10 +24,10 @@ Route::get('/contacts', function() {
 })->name('contacts.index');
 
 Route::controller(ProductController::class)->group(function (){
-    Route::get('/products', 'index');
+    Route::get('/products', 'index')->name('products.index');
     Route::post('/products/create', 'store');
     Route::put('/products/{id}', 'update');
-    Route::destroy('/products/{id}/delete', 'destroy');
+    // Route::destroy('/products/{id}/delete', 'destroy');
 });
 
 Route::controller(BrandController::class)->group(function() {
