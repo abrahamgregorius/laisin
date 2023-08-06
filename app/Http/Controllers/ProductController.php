@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return;
     }
 
     /**
@@ -28,7 +28,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create([
+            'name' => $request->name,
+            'part_number' => $request->part_number,
+            'description' => $request->description,
+            'brand_id' => $request->brand_id,
+            'car_year' => $request->car_year
+        ]);
+
+        return redirect('/');
     }
 
     /**
@@ -36,7 +44,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return;
     }
 
     /**
@@ -44,15 +52,22 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Product $product, string $id)
     {
-        //
+        $product->name = $request->name;
+        $product->part_number = $request->name;
+        $product->description = $request->description;
+        $product->brand_id = $request->brand_id;
+        $product->car_year = $request->car_year;
+        $product->save();
+
+        return redirect('/');
     }
 
     /**
@@ -60,6 +75,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect('/');
     }
 }

@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class BrandController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return;
+        return view('admin.home');
     }
 
     /**
@@ -20,7 +19,7 @@ class BrandController extends Controller
      */
     public function create()
     {
-        return;
+        //
     }
 
     /**
@@ -28,46 +27,38 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        Brand::create([
-            'brand_name' => $request->brand_name,
-        ]);
-
-        return redirect('/');
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Brand $brand)
+    public function show(string $id)
     {
-        return;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Brand $brand)
+    public function edit(string $id)
     {
-        return;
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, string $id)
     {
-        $brand->brand_name = $request->brand_name;
-        $brand->save();
-
-        return redirect('/');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(string $id)
     {
-        $brand->delete();
-        return redirect('/');
+        //
     }
 }
