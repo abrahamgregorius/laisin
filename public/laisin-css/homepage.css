@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  height: 100%;
+}
+
+
+:root {
+ --main: #1f2630;
+ --laisin: #f8470a;
+
+}
+
+header {
+ background-color: var(--main);
+ height: 70px;
+ position: sticky;
+ top:0;
+}
+
+.laisin-navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.laisin-brand img {
+    height: 40px;
+}
+
+
+
+.laisin-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.laisin-menu li {
+  color:white;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.laisin-menu li a {
+   text-decoration: none;
+   color: white;
+}
+
+
+.laisin-active::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    bottom: -8px;
+    left:0;
+    position: absolute;
+    background-color: var(--laisin);
+}
+
+.laisin-menu li:last-child {
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.laisin-menu li a:hover {
+  color: var(--laisin)
+}
+
+.hamburger {
+ display: none;
+}
+
+.mobile-nav {
+  background-color: var(--main);
+  width: 300px;
+  padding-top: 20px;
+  min-height: 100vh;
+  /* height: 100%; */
+  transform : translateX(-100%);
+  position: fixed;
+  z-index: 99;
+  top:70px;
+  transition: 1s;
+}
+
+.slide {
+  transform: translateX(0%);
+}
+
+.laisin-menu-mobile li a{
+    color:white;
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.laisin-menu-mobile > li {
+  margin: 15px 0;
+}
+
+.laisin-menu-mobile li a:hover {
+   color: var(--laisin);
+}
+
+.close-mobile-nav {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media only screen and (max-width:600px) {
+    .laisin-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .laisin-brand img {
+        height: 30px;
+    }
+
+}
+
