@@ -1,0 +1,13 @@
+#laisin img {
+    height: 30px;
+}
+
+.logout a,
+.nav-link {
+    color: black;
+}
+
+.product {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}

@@ -15,12 +15,18 @@ class ProductController extends Controller
         return view('products');
     }
 
+    public function admin_index(){
+   
+        return view('admin.products.index');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return;
+        return view('admin.products.create');
     }
 
     /**
@@ -44,7 +50,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return;
+        return view('admin.products.show');
     }
 
     /**
@@ -52,7 +58,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return;
+        return view('admin.products.update');
     }
 
     /**
