@@ -23,13 +23,19 @@ Route::get('/contacts', function() {
     return view('contacts');
 })->name('contacts.index');
 
+
+// TODO: route dibawah diexecute setelah Login, buat middleware
+
+Route::get('/admin', [AdminController::class, 'index']);
+
 Route::controller(ProductController::class)->group(function (){
     Route::get('/products', 'index')->name('products.index');
     Route::post('/products/create', 'store');
     Route::put('/products/{id}', 'update');
-    // Route::destroy('/products/{id}/delete', 'destroy');
+    Route::delete('/products/{id}/delete', 'destroy');
 });
 
 Route::controller(BrandController::class)->group(function() {
-    // Route::
+    Route::get('/brands', 'index');
+
 });
