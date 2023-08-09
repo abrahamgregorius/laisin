@@ -11,6 +11,38 @@
 
 <div class="container mt-3">
     <h1>Products</h1>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Part Number</th>
+                <th>Car Brand</th>
+                <th>Car Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{-- @foreach($datas as $data) --}}
+                <tr>
+                    <td>Drupal</td>
+                    <td>12345</td>
+                    <td>Toyota</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Joomla</td>
+                    <td>12345</td>
+                    <td>Daihatsu</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>Wordpress</td>
+                    <td>12345</td>
+                    <td>Datsun</td>
+                    <td>2023</td>
+                </tr>
+            {{-- @endforeach --}}
+        </tbody>
+    </table>
 </div>
 
 @endsection
