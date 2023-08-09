@@ -7,18 +7,9 @@ use App\Http\Controllers\ProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+<<<<<<< Updated upstream
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/contacts', function() {
     return view('contacts');
@@ -57,14 +48,30 @@ Route::prefix('/admin')->group(function(){
 });
 
 
+=======
+Route::get('/products', function() {return view('products');})->name('products.show');
+Route::get('/contacts', function() {return view('contacts');})->name('contacts.index');
+Route::get('/admin', [AdminController::class, 'index']);
+>>>>>>> Stashed changes
 
-Route::controller(ProductController::class)->group(function (){
-    Route::get('/products', 'index')->name('products.index');
-    Route::post('/products/create', 'store');
-    Route::put('/products/{id}', 'update');
-    Route::delete('/products/{id}/delete', 'destroy');
+Route::middleware('isLogin')->group(function() {
+    Route::prefix('/admin')->group(function() {
+        Route::controller(ProductController::class)->group(function (){
+            Route::get('/products', 'index')->name('products.index');
+            Route::post('/products/create', 'store');
+            Route::put('/products/{id}', 'update');
+            Route::delete('/products/{id}/delete', 'destroy');
+        });
+    });
+    
+    Route::controller(BrandController::class)->group(function() {
+        Route::get('/brands', 'index');
+    });
 });
 
+<<<<<<< Updated upstream
 Route::controller(BrandController::class)->group(function() {
     Route::get('/brands', 'index');
 });
+=======
+>>>>>>> Stashed changes
