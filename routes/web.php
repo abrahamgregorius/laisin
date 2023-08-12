@@ -9,14 +9,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Route guest
-Route::middleware(['guest'])->group(function() {
-    Route::get('/', [HomeController::class, 'index'])->name('home.index');
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::get('/products/{id}', [ProductController::class], 'show');
-    Route::get('/contacts', function() {
-        return view('contacts');
-    })->name('contacts.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/products', [HomeController::class, 'index_products'])->name('products.index');
+Route::get('/products/{id}', [HomeController::class], 'show');
+Route::get('/contacts', function() {return view('contacts');})->name('contacts.index');
+// Route::middleware(['guest'])->group(function() {
+// });
 
 
 // Route admin
