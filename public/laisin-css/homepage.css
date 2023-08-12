@@ -14,6 +14,7 @@ body {
 
 :root {
     --main: #1f2630;
+    --secondary: #b3c2cf;
     --laisin: #f8470a;
 }
 
@@ -385,6 +386,8 @@ header {
 }
 
 .img img {
+    user-select: none;
+    pointer-events: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -499,6 +502,120 @@ header {
     background-color: var(--laisin);
 }
 
+.laisin-more_info {
+    padding: 80px 0;
+}
+
+.need-more-text {
+    text-align: start;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 5px solid black;
+}
+
+.need-more-text::after {
+    content: "";
+    width: 65%;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    background-color: var(--laisin);
+}
+
+.need-more-text h1 {
+    font-size: 45px;
+}
+
+.need-more-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-us-button,
+.find-parts-button {
+    border: 1px solid var(--laisin);
+    color: var(--laisin);
+    width: fit-content;
+    margin: 10px 0px;
+    font-size: 30px;
+    padding: 10px 80px;
+    transition: .6s;
+    border-radius: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.contact-us-button:hover,
+.find-parts-button:hover {
+    background-color: var(--laisin);
+    color: black;
+}
+
+.right-wrappers-more-info {
+    display: flex;
+    height: 100%;
+    margin-top: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--main);
+    /* padding: 20px 0px; */
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.address {
+    color: #b3c2cf;
+}
+
+.footer-brands img {
+    height: 40px;
+}
+
+.menu-head {
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.menu-1 :not(.menu-head),
+.menu-2 :not(.menu-head) {
+    color: #b3c2cf;
+    cursor: pointer;
+    width: 100px;
+}
+
+.footer-menus {
+    color: white;
+    display: flex;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.company-name {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.footer-bottom {
+    background-color: #1f2630;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
 @media only screen and (max-width:600px) {
     .laisin-menu {
         display: none;
@@ -518,5 +635,21 @@ header {
         width: 70%;
         font-size: 18px;
         text-align: center;
+    }
+    .right-wrappers-more-info {
+        display: flex;
+        height: 100%;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .footer-menus {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-brands {
+        margin: 28px;
     }
 }
