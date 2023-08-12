@@ -72,6 +72,7 @@
 <div class="laisin-aboutus">
     <div class="container mx-auto">
         <div class="about-us-title">
+            <img src="{{ asset('assets/laisin.png') }}" style="position: absolute; z-index:-3; height: 300px; opacity: 5%" loading="lazy">
             <h3 class="text-center">About Us</h3>
         </div>
         <div class="about-us-wrappers row">
@@ -94,11 +95,10 @@
                           </svg>
                       </div>
                       <div class="promotion-text">
-                        
                         <h5>
                             Affordable Auto Prices
                           </h5>
-                          <p>AutoDrive is nisi aliquip consequat duis velit esse</p>
+                          <p>Laisin is nisi aliquip consequat duis velit esse</p>
                       </div>
                 </div>
                 <div class="content-promotion">
@@ -132,6 +132,49 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="laisin-testimonials">
+    <div class="container mx-auto">
+          <div class="testimonials-title">
+            <h3 class="text-center text-white">Testimonial</h3>
+          </div>
+          <div class="testi-list row">
+              <div class="col-md-6">
+                  <div class="testi-card">
+                    <svg style="position: absolute; z-index:1; top:0; left: 0; opacity: 8%;" xmlns="http://www.w3.org/2000/svg" width="330" height="330" fill="#f8470a" class="bi bi-quote" viewBox="0 0 16 16">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                      </svg>
+                    <div class="testi-wrappers" style="z-index: 2">
+                        <div class="testi-img">
+                            <img src="https://this-person-does-not-exist.com/img/avatar-gen11b86bbc4d3eafa111bd71e9a9d9fe2a.jpg" alt="person">
+                        </div>
+                        <div class="testi-description">
+                            <h5>Jonh Doe</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam eveniet illo, maxime culpa saepe repudiandae esse eligendi architecto deserunt?
+                            </p>
+                        </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="testi-card">
+                    <svg style="position: absolute; z-index:1; top:0; left: 0; opacity: 8%;" xmlns="http://www.w3.org/2000/svg" width="330" height="330" fill="#f8470a" class="bi bi-quote" viewBox="0 0 16 16">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                      </svg>
+                    <div class="testi-wrappers">
+                        <div class="testi-img">
+                            <img src="https://this-person-does-not-exist.com/img/avatar-gen11b86bbc4d3eafa111bd71e9a9d9fe2a.jpg" alt="person">
+                        </div>
+                        <div class="testi-description">
+                            <h5>Faris Maulana</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam eveniet illo, maxime culpa saepe repudiandae esse eligendi architecto deserunt?
+                            </p>
+                        </div>
+                    </div>  
+                  </div>
+              </div>
+          </div>
     </div>
 </div>
 <div style="margin-bottom: 300px;"></div>
