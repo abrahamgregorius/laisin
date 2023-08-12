@@ -12,7 +12,8 @@ class BrandController extends Controller
      */
     public function index()
     {
-        return view('admin.brands.index');
+        $brands = Brand::all();
+        return view('admin.brands.index', compact("brands"));
     }
 
     /**
@@ -32,34 +33,37 @@ class BrandController extends Controller
             'brand_name' => $request->brand_name,
         ]);
 
-        return redirect('/');
+        return redirect('/admin/brands');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Brand $brand)
+    public function show(Brand $brand, string $id)
     {
-        return view('admin.brands.show');
+        $data = Brand::where('id', $id)->first();
+        return view('admin.brands.show', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Brand $brand)
+    public function edit(Brand $brand, string $id)
     {
-        return view('admin.brands.update'); 
+        $data = Brand::where('id', $id)->first();
+        return view('admin.brands.update', compact('data')); 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, Brand $brand, string $id)
     {
+        $brand = Brand::findOrFail($id);
         $brand->brand_name = $request->brand_name;
         $brand->save();
 
-        return redirect('/');
+        return redirect('/admin/brands');
     }
 
     /**

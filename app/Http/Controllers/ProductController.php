@@ -12,13 +12,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('products');
-    }
-
-    public function admin_index(){
-   
         return view('admin.products.index');
-
     }
 
     /**
@@ -35,7 +29,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         Product::create([
-            'name' => $request->name,
+            'name' => $request->product_name,
             'part_number' => $request->part_number,
             'description' => $request->description,
             'brand_id' => $request->brand_id,
