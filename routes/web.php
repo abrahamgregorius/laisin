@@ -28,15 +28,19 @@ Route::prefix('/admin')->group(function(){
         
         // Entry products di admin
         Route::prefix('/products')->group(function(){
-            
             Route::controller(ProductController::class)->group(function(){
+                // Index products
                 Route::get('/', 'index')->name('index.products');
-                 Route::get('/create','create')->name('create.product.index');
-                 Route::post('/create','store')->name('create.product');
-                 Route::get('{id}/show','show')->name('show.product');
-                 Route::get('/{id}/edit','edit')->name('edit.product');
-                 Route::put('/{id}','update')->name('update.product');
-                 Route::delete('{id}/delete','destroy')->name('delete.product');
+                // Create product
+                Route::get('/create','create')->name('create.product.index');
+                Route::post('/create','store')->name('create.product');
+                // Show product
+                Route::get('{id}/show','show')->name('show.product');
+                // Edit product
+                Route::get('/{id}/edit','edit')->name('edit.product');
+                Route::post('/{id}/edit','update')->name('update.product');
+                
+                Route::delete('{id}/delete','destroy')->name('delete.product');
             });
         });
     

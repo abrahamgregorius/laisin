@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('part_number')->unique();
             $table->text('description');
-            $table->foreignId('brand_id')->constrained();
+            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
             $table->integer('car_year');
             $table->timestamps();
         });
