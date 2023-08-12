@@ -72,7 +72,7 @@
 <div class="laisin-aboutus">
     <div class="container mx-auto">
         <div class="about-us-title">
-            <img src="{{ asset('assets/laisin.png') }}" style="position: absolute; z-index:-3; height: 300px; opacity: 5%" loading="lazy">
+            <img class="aboutus-laisin-img" src="{{ asset('assets/laisin.png') }}" style="position: absolute; z-index:-3; height: 300px; opacity: 5%" loading="lazy">
             <h3 class="text-center">About Us</h3>
         </div>
         <div class="about-us-wrappers row">
