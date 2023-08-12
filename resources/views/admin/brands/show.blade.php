@@ -9,13 +9,13 @@
     <div class="card">
         <div class="card-body">
             <div class="product product-name">
+                <p>ID</p>
+                <h3>{{ $data->id }}</h3>
+            </div>      
+            <div class="product product-name">
                 <p>Brand Name</p>
-                <h3>Toyota</h3>
-            </div>
-            <div class="product product-part-number">
-                <p>Product Amount</p>
-                <h3>18</h3>
-            </div>        
+                <h3>{{ $data->brand_name }}</h3>
+            </div>      
         </div>
 
     </div>
