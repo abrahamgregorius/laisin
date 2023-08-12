@@ -21,7 +21,7 @@
                 <thead>
                    <tr>
                     <td>
-                        No
+                        ID
                     </td>
                     <td>
                         Brand Name

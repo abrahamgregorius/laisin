@@ -11,7 +11,7 @@
                 <form action="{{ route('create.brand') }}" method="POST">
                     @csrf
                     <label for="brand_name" class="form-label">Brand Name</label>
-                    <input type="text" name="brand_name" class="form-control" placeholder="Type Brand Name Here">
+                    <input type="text" autocomplete="off" name="brand_name" class="form-control" placeholder="Type Brand Name Here">
                     <button type="submit" class="btn btn-primary float-right mt-4">Submit</button>
                 </form>
             </div>
