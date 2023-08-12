@@ -26,7 +26,7 @@
                 <thead>
                    <tr>
                     <td>
-                        No
+                        ID
                     </td>
                     <td>
                         Product Name
@@ -46,54 +46,16 @@
                    </tr>
                 </thead>
                 <tbody>
+                    @foreach ($products as $product)
                     <tr>
-                        <td>1</td>
-                        <td>Toyota Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
+                        <td>{{ $product->id }}</td>
+                        <td><a href="{{ route('show.product', $product->id) }}">{{ $product->name }}</a></td>
+                        <td>{{ $product->part_number }}</td>
+                        <td>{{ $product->description }}</td>
+                        <td>{{ $product->brand->brand_name }}</td>
+                        <td>{{ $product->car_year }}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mitsubishi Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Toyota Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Toyota Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Toyota Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Toyota Hens</td>
-                        <td>121984</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Toyota</td>
-                        <td>2019</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
