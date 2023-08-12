@@ -69,9 +69,10 @@ class BrandController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(Brand $brand, string $id)
     {
-        $brand->delete();
-        return redirect('/');
+        $brand_data = Brand::findOrFail($id);
+        $brand_data->delete();
+        return redirect('/admin/brands');
     }
 }

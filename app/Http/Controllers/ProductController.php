@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.products.index');
+        $products = Product::all();
+
+        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -20,7 +23,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $brands = Brand::all();
+        return view('admin.products.create', compact('brands'));
     }
 
     /**
@@ -36,23 +40,27 @@ class ProductController extends Controller
             'car_year' => $request->car_year
         ]);
 
-        return redirect('/');
+        return redirect('/admin/products');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Product $product, string $id)
     {
-        return view('admin.products.show');
+        $data = Product::findOrFail($id);
+        return view('admin.products.show', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(Product $product, string $id)
     {
-        return view('admin.products.update');
+        $brands = Brand::all();
+        $data = Product::findOrFail($id);
+        // dd($data);
+        return view('admin.products.update', compact('data', 'brands'));
     }
 
     /**
@@ -60,22 +68,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product, string $id)
     {
-        $product->name = $request->name;
-        $product->part_number = $request->name;
-        $product->description = $request->description;
-        $product->brand_id = $request->brand_id;
-        $product->car_year = $request->car_year;
-        $product->save();
+        $data = Product::findOrFail($id);        
+        $data->name = $request->name;
+        $data->part_number = $request->part_number;
+        $data->description = $request->description;
+        $data->brand_id = $request->brand_id;
+        $data->car_year = $request->car_year;
+        $data->save();
 
-        return redirect('/');
+        return redirect('/admin/products');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Product $product, string $id)
     {
-        $product->delete();
-        return redirect('/');
+        $product_data = Product::findOrFail($id);
+        $product_data->delete();
+        return redirect('/admin/products');
     }
 }
