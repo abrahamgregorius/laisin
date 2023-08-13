@@ -1,0 +1,26 @@
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tr {
+    border: 1px solid #eee !important;
+}
+
+.table>thead {
+    background-color: var(--main);
+}
+
+.laisin-breadcrumb {
+    margin-left: -25px;
+}
+
+.laisin-breadcrumb ul {
+    display: flex;
+    gap: 5px;
+}
+
+.laisin-breadcrumb ul li a {
+    text-decoration: none;
+    color: #8e99a4;
+}

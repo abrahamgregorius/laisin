@@ -523,7 +523,7 @@ header {
 }
 
 .need-more-text h1 {
-    font-size: 45px;
+    font-size: 35px;
 }
 
 .need-more-buttons {
@@ -539,22 +539,27 @@ header {
 
 .contact-us-button,
 .find-parts-button {
-    border: 1px solid var(--laisin);
-    color: var(--laisin);
+    /* border: 1px solid var(--laisin); */
+    background-color: var(--main);
+    color: white;
     width: fit-content;
     margin: 10px 0px;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
     padding: 10px 80px;
     transition: .6s;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .contact-us-button:hover,
 .find-parts-button:hover {
     background-color: var(--laisin);
-    color: black;
+    color: white;
 }
 
 .right-wrappers-more-info {
