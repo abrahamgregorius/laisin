@@ -28,5 +28,17 @@ class HomeController extends Controller
 
     public function index_products() {
         return view('products');
+    } 
+
+    public function all_category(){
+        return view('categories');
+    }
+
+    public function all_brands(){
+        return view('brands');
+    }
+
+    public function all_years(){
+        return view('years');
     }
 }

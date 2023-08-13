@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Route;
 // Route guest
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/products', [HomeController::class, 'index_products'])->name('products.index');
+Route::get('/products/categories',[HomeController::class,'all_category'])->name('categories.index');
+Route::get('/products/brands',[HomeController::class,'all_brands'])->name('brands.index');
+Route::get('/products/years',[HomeController::class,'all_years'])->name('brands.years');
 Route::get('/products/{id}', [HomeController::class], 'show');
 Route::get('/contacts', function() {return view('contacts');})->name('contacts.index');
 // Route::middleware(['guest'])->group(function() {
