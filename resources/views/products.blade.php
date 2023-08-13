@@ -29,6 +29,9 @@
             </li>
         </ul>
     </div>
+    <div class="laisin-search-product">
+        <input type="text" placeholder="Search Product Name">
+    </div>
     <table class="table">
         <thead class="text-white">
             <tr>

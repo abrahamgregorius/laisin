@@ -29,7 +29,7 @@
           <img src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
   
