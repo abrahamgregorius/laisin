@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Dashboard</title>
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <link rel="stylesheet" href="{{ asset('laisin-css/admin.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 </head>
@@ -120,7 +121,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://kit.fontawesome.com/1426d21c51.js" crossorigin="anonymous"></script>
 <script src="{{ asset('laisin-js/laisin-chart.js') }}"></script>
-
+<script src="{{ asset('laisin-js/live-search.js')}}"></script>
 
 </body>
 

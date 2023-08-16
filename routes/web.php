@@ -51,6 +51,7 @@ Route::prefix('/admin')->group(function(){
             Route::controller(BrandController::class)->group(function(){
                 // Index brands
                 Route::get('/','index')->name('index.brands');
+                Route::post('/','brands_search')->name('brands.search');
                 // Create brand
                 Route::get('/create','create')->name('create.brand.index');
                 Route::post('/create','store')->name('create.brand');

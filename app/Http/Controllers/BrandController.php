@@ -11,9 +11,21 @@ class BrandController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {   
+        
         $brands = Brand::all();
         return view('admin.brands.index', compact("brands"));
+    }
+
+    public function brands_search(Request $request){
+        if($request->ajax()){
+            if($request->has('brand_to_search')){
+                $brandToSearch = Brand::where('brand_name','like','%'.$request->brand_to_search.'%')->get();
+                return json_encode($brandToSearch);
+                // dd($brandToSearch);
+            }
+            return json_encode("Tidak Ada Data Yang Masuk Bjir");
+        }
     }
 
     /**
