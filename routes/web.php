@@ -62,26 +62,26 @@ Route::prefix('/admin')->group(function(){
                 Route::delete('{id}/delete','destroy')->name('delete.brand');
             });
         });
+
+
+        Route::prefix('/categories')->group(function(){
+            Route::controller(BrandController::class)->group(function(){
+                // Index categories
+                Route::get('/','index')->name('index.categories');
+                // Create category
+                Route::get('/create','create')->name('create.category.index');
+                Route::post('/create','store')->name('create.category');
+                // Show category
+                Route::get('{id}/show','show')->name('show.category');
+                // Edit category
+                Route::get('/{id}/edit','edit')->name('edit.category');
+                Route::post('/{id}/edit','update')->name('update.category');
+                // Delete category
+                Route::delete('{id}/delete','destroy')->name('delete.category');
+            });
+        });
     });
 
 });
-
-
-
-// Route::middleware('isLogin')->group(function() {
-//     Route::prefix('/admin')->group(function() {
-//         Route::controller(ProductController::class)->group(function (){
-//             Route::get('/products', 'index')->name('products.index');
-//             Route::post('/products/create', 'store');
-//             Route::put('/products/{id}', 'update');
-//             Route::delete('/products/{id}/delete', 'destroy');
-//         });
-//     });
-    
-//     Route::controller(BrandController::class)->group(function() {
-//         Route::get('/brands', 'index');
-//     });
-
-// });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
