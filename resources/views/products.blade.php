@@ -1,13 +1,6 @@
 @extends('layout.app')
 @section('content')
 
-{{-- <div class="laisin-hero">
-    <img src="{{ asset('assets/image3.jpg') }}" alt="">
-    <div class="hero-text">
-        <h1>Our Products</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias tempore dignissimos! Sequi illo ipsam delectus, sed eaque ut vitae exercitationem neque aperiam sapiente, alias fugit provident quam vel ab!</p>
-    </div>
-</div> --}}
 <div class="container mx-auto">
     <div class="laisin-breadcrumb">
         <ul>
@@ -25,7 +18,7 @@
 </div>
 
 
-<div class="laisin-products-page">
+<section class="laisin-products-page">
     <div class="container mx-auto mt-4">
         <h4>Products</h4>
         <div class="laisin-products-options">
@@ -101,7 +94,7 @@
             </table>
         </div>
     </div>
-</div>
+</section>
 
 
 @endsection

@@ -113,6 +113,11 @@ a:hover {
     padding: 10px;
 }
 
+.laisin-categories-page {
+     padding-top: 10px; 
+     background-color: #fafafa;
+}
+
 
 @media only screen and (max-width:600px) { 
     .laisin-products-options {
@@ -123,6 +128,21 @@ a:hover {
     .options-category {
         width: 100%;
     }
+
+    .options-category:hover  .wrappers-options-category::after {
+        width: 0%; 
+        transition: width .5s ease
+     }
+     
+     .wrappers-options-category::after {
+         content: "";
+         width: 0;
+         height: 2px;
+         background-color: var(--laisin);
+         position: absolute;
+         opacity: 30%;
+         bottom: 5px;
+     }
 
 
 }
