@@ -70,26 +70,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach($datas as $data) --}}
+                    @foreach($products as $product)
                         <tr>
-                            <td>Drupal</td>
+                            <td>{{ dd($products) }}</td>
                             <td>12345</td>
                             <td>Toyota</td>
                             <td>2021</td>
                         </tr>
-                        <tr>
-                            <td>Joomla</td>
-                            <td>12345</td>
-                            <td>Daihatsu</td>
-                            <td>2020</td>
-                        </tr>
-                        <tr>
-                            <td>Wordpress</td>
-                            <td>12345</td>
-                            <td>Datsun</td>
-                            <td>2023</td>
-                        </tr>
-                    {{-- @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>

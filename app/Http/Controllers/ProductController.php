@@ -37,6 +37,7 @@ class ProductController extends Controller
             'part_number' => $request->part_number,
             'description' => $request->description,
             'brand_id' => $request->brand_id,
+            'brand_id' => $request->category_id,
             'car_year' => $request->car_year
         ]);
 
