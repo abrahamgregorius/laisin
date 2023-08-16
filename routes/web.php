@@ -73,12 +73,12 @@ Route::prefix('/admin')->group(function(){
                 Route::get('/create','create')->name('create.category.index');
                 Route::post('/create','store')->name('create.category');
                 // Show category
-                Route::get('{id}/show','show')->name('show.category');
+                Route::get('{slug}/detail','show')->name('show.category');
                 // Edit category
-                Route::get('/{id}/edit','edit')->name('edit.category');
-                Route::post('/{id}/edit','update')->name('update.category');
+                Route::get('/{slug}/edit','edit')->name('edit.category');
+                Route::post('/{slug}/edit','update')->name('update.category');
                 // Delete category
-                Route::delete('{id}/delete','destroy')->name('delete.category');
+                Route::delete('{slug}/delete','destroy')->name('delete.category');
             });
         });
     });

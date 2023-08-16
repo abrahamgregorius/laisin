@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class CategoryController extends Controller
 {
@@ -13,7 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-
+    
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -40,27 +41,27 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category, string $id)
+    public function show(Category $category, string $slug)
     {
-        $data = Category::where('id', $id)->first();
+        $data = Category::where('slug', $slug)->first();
         return view('admin.categories.show', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category, string $id)
+    public function edit(Category $category, string $slug)
     {
-        $data = Category::where('id', $id)->first();
+        $data = Category::where('slug', $slug)->first();
         return view('admin.categories.update', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category, string $id)
+    public function update(Request $request, Category $category, string $slug)
     {
-        $category = Category::findOrFail($id);
+        $category = Category::findOrFail($slug);
         $category->name = $request->category_name;
         $category->save();
 
