@@ -34,38 +34,46 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect('/category');
+        return redirect('/admin/category');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(Category $category, string $id)
     {
-        //
+        $data = Category::where('id', $id)->first();
+        return view('', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Category $category, string $id)
     {
-        //
+        $data = Category::where('id', $id)->first();
+        return view('', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Category $category, string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->name = $request->name;
+        $category->save();
+
+        return redirect('/admin/categories');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category, string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->delete();
+        return redirect('/admin/categories');
     }
 }
