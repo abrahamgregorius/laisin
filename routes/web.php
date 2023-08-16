@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -65,7 +66,7 @@ Route::prefix('/admin')->group(function(){
 
 
         Route::prefix('/categories')->group(function(){
-            Route::controller(BrandController::class)->group(function(){
+            Route::controller(CategoryController::class)->group(function(){
                 // Index categories
                 Route::get('/','index')->name('index.categories');
                 // Create category

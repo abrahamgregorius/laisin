@@ -12,9 +12,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $category = Category::all();
+        $categories = Category::all();
 
-        return view('', compact('category'));
+        return view('admin.categories.index', compact('categories'));
     }
 
     /**
@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('');
+        return view('admin.categories.create');
     }
 
     /**
@@ -31,10 +31,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create([
-            'name' => $request->name,
+            'name' => $request->category_name,
         ]);
 
-        return redirect('/admin/category');
+        return redirect(route('index.categories'));
     }
 
     /**
@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function show(Category $category, string $id)
     {
         $data = Category::where('id', $id)->first();
-        return view('', compact('data'));
+        return view('admin.categories.show', compact('data'));
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     public function edit(Category $category, string $id)
     {
         $data = Category::where('id', $id)->first();
-        return view('', compact('data'));
+        return view('admin.categories.update', compact('data'));
     }
 
     /**
@@ -61,10 +61,10 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category, string $id)
     {
         $category = Category::findOrFail($id);
-        $category->name = $request->name;
+        $category->name = $request->category_name;
         $category->save();
 
-        return redirect('/admin/categories');
+        return redirect(route('index.categories'));
     }
 
     /**
@@ -74,6 +74,6 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $category->delete();
-        return redirect('/admin/categories');
+        return redirect(route('index.categories'));
     }
 }
