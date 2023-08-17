@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -29,17 +31,17 @@ class HomeController extends Controller
 
     public function index_products() {
         $products = Product::all();
-
-        dd($products);
         return view('products', compact('products'));
     } 
 
     public function all_category(){
-        return view('categories');
+        $categories = Category::all();
+        return view('categories',compact('categories'));
     }
 
     public function all_brands(){
-        return view('brands');
+        $brands = Brand::all();
+        return view('brands',compact('brands'));
     }
 
     public function all_years(){

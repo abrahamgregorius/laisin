@@ -13,6 +13,7 @@ class Product extends Model
         'name',
         'part_number',
         'description',
+        'category_id',
         'brand_id',
         'car_year'
     ];

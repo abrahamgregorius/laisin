@@ -19,7 +19,7 @@ tr {
 }
 
 .laisin-breadcrumb {
-    margin-left: -30px;
+    margin-left: -49px;
     padding-top: 15px;
 }
 
@@ -38,16 +38,16 @@ tr {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #f8470a !important;
 }
 
-.laisin-search-product {
+.laisin-search {
     margin: 20px 0px;
     position: relative;
 }
 
-.laisin-search-product>input {
+.laisin-search>input {
     padding-left: 30px;
 }
 
-.laisin-search-product>.icons {
+.laisin-search>.icons {
     position: absolute;
     display: flex;
     height: 100%;
@@ -55,7 +55,10 @@ tr {
     align-items: center;
 }
 
-.laisin-products-page {
+.laisin-products-page,
+.laisin-categories-page,
+.laisin-brands-page,
+.laisin-years-page {
     padding-top: 10px;
     background-color: #fafafa;
     height: 100vh;
@@ -85,9 +88,9 @@ a:hover {
     color: #1f2630;
 }
 
-.options-category:hover  .wrappers-options-category::after {
-   width: 90%; 
-   transition: width .5s ease
+.options-category:hover .wrappers-options-category::after {
+    width: 90%;
+    transition: width .5s ease
 }
 
 .wrappers-options-category::after {
@@ -114,35 +117,29 @@ a:hover {
 }
 
 .laisin-categories-page {
-     padding-top: 10px; 
-     background-color: #fafafa;
+    padding-top: 10px;
+    background-color: #fafafa;
 }
 
-
-@media only screen and (max-width:600px) { 
+@media only screen and (max-width:600px) {
     .laisin-products-options {
         display: flex;
         flex-direction: column;
     }
-
     .options-category {
         width: 100%;
     }
-
-    .options-category:hover  .wrappers-options-category::after {
-        width: 0%; 
+    .options-category:hover .wrappers-options-category::after {
+        width: 0%;
         transition: width .5s ease
-     }
-     
-     .wrappers-options-category::after {
-         content: "";
-         width: 0;
-         height: 2px;
-         background-color: var(--laisin);
-         position: absolute;
-         opacity: 30%;
-         bottom: 5px;
-     }
-
-
+    }
+    .wrappers-options-category::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--laisin);
+        position: absolute;
+        opacity: 30%;
+        bottom: 5px;
+    }
 }

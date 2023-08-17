@@ -23,7 +23,15 @@
                     <div class="mb-2"></div>
                     <label for="description" class="form-label">Description</label>
                     <textarea type="text" name="description" class="form-control" placeholder="Type Product Description Here"></textarea>
-                    
+                     {{-- Select Category --}}
+                    <div class="mb-2"></div>
+                    <label for="brand_id" class="form-label">Brand Id</label>
+                    <select class="form-control" name="category_id">
+                        <option selected>-- SELECT CATEGORY --</option>
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                     {{-- Select brand --}}
                     <div class="mb-2"></div>
                     <label for="brand_id" class="form-label">Brand Id</label>

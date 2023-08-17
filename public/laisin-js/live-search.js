@@ -28,7 +28,6 @@ const routing = (idParameter, routeAction) => {
 const updateSearchResults = async(results) => {
     let searchResultContainer = $('#brands-data')
     searchResultContainer.empty();
-    console.log(results.length)
     if (results.length > 0) {
         await results.forEach(function(result) {
             let resultElement = document.createElement('tr')

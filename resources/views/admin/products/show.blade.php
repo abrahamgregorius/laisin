@@ -10,23 +10,23 @@
         <div class="card-body">
             <div class="product product-name">
                 <p>Product Name</p>
-                <h4>Toyota Hens</h4>
+                <h4>{{ $data->name }}</h4>
             </div>
             <div class="product product-part-number">
                 <p>Part Number</p>
-                <h4>Toyota Hens</h4>
+                <h4>{{ $data->part_number }}</h4>
             </div>
             <div class="product product-description">
                 <p>Description</p>
-                <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iste?</h4>
+                <h4>{{ $data->description }}</h4>
             </div>
             <div class="product product-brand">
                 <p>Brand</p>
-                <h4>Toyota</h4>
+                <h4>{{ $data->brand->brand_name }}</h4>
             </div>
             <div class="product product-car-year">
                 <p>Car Year</p>
-                <h4>2019</h4>
+                <h4>{{ $data->car_year }}</h4>
             </div>
             
         </div>

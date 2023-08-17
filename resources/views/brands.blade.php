@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('content')
 
-<div class="container mx-auto">
     <div class="laisin-breadcrumb">
+        <div class="container mx-auto">
         <ul>
             <li>
             <a href="{{ route('home') }}">Home</a>
@@ -20,8 +20,10 @@
                 <a href="" style="color:#f8470a">All Brands </a>
             </li>
         </ul>
-    </div>
-</div>
+       </div>
+  </div>
+
+<section class="laisin-brands-page">
 <div class="container mx-auto mt-4">
     <h4>Brands</h4>
     <div class="laisin-products-options">
@@ -53,8 +55,35 @@
             </div>
         </a>
     </div>
+    <div class="laisin-search">
+        <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8e99a4;" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" placeholder="Search Brand Name" class="form-control">
+    </div>
+    <div class="laisin-table">
+        <div  class="table-title">
+            <p>All Brands</p>
+        </div>
+        <table class="table">
+            <thead class="text-white">
+                <tr>
+                    <th>Name</th>
+                    <th>Numbers Of Products</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($brands as $brand)
+                    <tr>
+                        <td>{{ $brand->brand_name }}</td>
+                        <td>{{ count($brands) }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
-
+</section>
 
 
 @endsection

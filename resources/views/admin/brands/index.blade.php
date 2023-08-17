@@ -32,9 +32,10 @@
                    </tr>
                 </thead>
                 <tbody id="brands-data">
+                    <?php $brand_id = 1 ?>
                     @foreach($brands as $brand)
                     <tr>
-                        <td>{{ $brand->id }}</td>
+                        <td>{{ $brand_id++ }}</td>
                         <td><a href="{{ route('show.brand', $brand->id) }}">{{ $brand->brand_name }}</a></td>
                         <td class="d-flex" style="gap: 10px;">
                             {{-- ganti 2 nya jadi $brands->id --}}
