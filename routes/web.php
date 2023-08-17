@@ -43,6 +43,8 @@ Route::prefix('/admin')->group(function(){
                 Route::post('/{id}/edit','update')->name('update.product');
                 
                 Route::delete('{id}/delete','destroy')->name('delete.product');
+
+              
             });
         });
     
@@ -62,6 +64,9 @@ Route::prefix('/admin')->group(function(){
                 Route::post('/{id}/edit','update')->name('update.brand');
                 // Delete brand
                 Route::delete('{id}/delete','destroy')->name('delete.brand');
+
+                // Route Delete Live Search 
+                Route::get('{id}/delete','destroy')->name('delete.product.livesearch');
             });
         });
 

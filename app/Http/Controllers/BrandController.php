@@ -21,8 +21,8 @@ class BrandController extends Controller
         if($request->ajax()){
             if($request->has('brand_to_search')){
                 $brandToSearch = Brand::where('brand_name','like','%'.$request->brand_to_search.'%')->get();
-                return json_encode($brandToSearch);
-                // dd($brandToSearch);
+                return response()->json($brandToSearch);
+                
             }
             return json_encode("Tidak Ada Data Yang Masuk Bjir");
         }
@@ -87,4 +87,5 @@ class BrandController extends Controller
         $brand_data->delete();
         return redirect('/admin/brands');
     }
+    
 }
