@@ -7,6 +7,7 @@
     <title>Laisindo Autoparts</title>
     <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/products.css') }}">
+    <link rel="stylesheet" href="{{ asset('laisin-css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
     <link rel="shortcut icon" href="{{ asset('assets/laisin-favicon.png') }}" type="image/x-icon">
 </head>
