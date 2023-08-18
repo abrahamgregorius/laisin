@@ -25,7 +25,7 @@
                     <textarea type="text" name="description" class="form-control" placeholder="Type Product Description Here"></textarea>
                      {{-- Select Category --}}
                     <div class="mb-2"></div>
-                    <label for="brand_id" class="form-label">Brand Id</label>
+                    <label for="brand_id" class="form-label">Category</label>
                     <select class="form-control" name="category_id">
                         <option selected>-- SELECT CATEGORY --</option>
                         @foreach ($categories as $category)
@@ -34,7 +34,7 @@
                     </select>
                     {{-- Select brand --}}
                     <div class="mb-2"></div>
-                    <label for="brand_id" class="form-label">Brand Id</label>
+                    <label for="brand_id" class="form-label">Brand</label>
                     <select class="form-control" name="brand_id">
                         <option selected>-- SELECT BRAND --</option>
                         @foreach ($brands as $brand)
