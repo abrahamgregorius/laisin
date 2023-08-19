@@ -537,7 +537,24 @@ header {
     justify-content: center;
 }
 
-.contact-us-button,
+.contact-us-button {
+    /* border: 1px solid var(--laisin); */
+    background-color: var(--main);
+    color: white;
+    width: fit-content;
+    margin: 10px 0px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 85px;
+    transition: .6s;
+    border-radius: 10px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .find-parts-button {
     /* border: 1px solid var(--laisin); */
     background-color: var(--main);
