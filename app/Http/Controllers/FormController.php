@@ -15,6 +15,11 @@ class FormController extends Controller
         return view('contacts');
     }
 
+    public function admin_index(Form $form) {
+        $forms = Form::get();
+        return view('admin.forms.index', compact('forms'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -40,9 +45,9 @@ class FormController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Form $form)
+    public function show(Form $form, string $id)
     {
-        //
+        //        
     }
 
     /**

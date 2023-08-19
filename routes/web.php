@@ -89,6 +89,11 @@ Route::prefix('/admin')->group(function(){
                 Route::delete('{slug}/delete','destroy')->name('delete.category');
             });
         });
+
+        Route::prefix('/forms')->group(function() {
+            Route::get('/', [FormController::class, 'admin_index'])->name('index.forms');
+        });
+
     });
 
 });
