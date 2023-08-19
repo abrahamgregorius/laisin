@@ -5,6 +5,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FormController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,8 @@ Route::get('/products/categories',[HomeController::class,'all_category'])->name(
 Route::get('/products/brands',[HomeController::class,'all_brands'])->name('brands.index');
 Route::get('/products/years',[HomeController::class,'all_years'])->name('brands.years');
 Route::get('/products/{id}', [HomeController::class], 'show');
-Route::get('/contacts', function() {return view('contacts');})->name('contacts.index');
+Route::get('/contacts', [FormController::class, 'index'])->name('contacts.index');
+Route::post('/contacts', [FormController::class, 'store'])->name('contacts.store');
 // Route::middleware(['guest'])->group(function() {
 // });
 

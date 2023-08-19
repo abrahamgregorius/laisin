@@ -16,21 +16,24 @@
         <div class="contact-page-card">
            <h4 class="fw-bold">Contact Us</h4>
            <div class="card-wrappers">
-               <div class="mt-2">
-                   <label>Name</label>
-                   <input type="text" class="form-control" placeholder="Type Your Name Here">
-               </div>
-               <div class="mt-2">
-                   <label>Email</label>
-                   <input type="email" class="form-control" placeholder="Type Your Email Adress Here"> 
-               </div>
-               <div class="mt-2">
-                   <label>Message</label>
-                   <textarea placeholder="Type your message here" class="form-control"></textarea>
-               </div>
-               <div class="mt-2">
-                   <button class="laisin-contact-btn">Submit</button>
-               </div>
+            <form action="" method="POST">
+                @csrf
+                <div class="mt-2">
+                    <label>Name</label>
+                    <input type="text" autocomplete="off" name="name" class="form-control" placeholder="Type Your Name Here">
+                </div>
+                <div class="mt-2">
+                    <label>Email</label>
+                    <input type="email" autocomplete="off" name="email" class="form-control" placeholder="Type Your Email Address Here"> 
+                </div>
+                <div class="mt-2">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Type Your Message Here" class="form-control"></textarea>
+                </div>
+                <div class="mt-2">
+                    <button class="laisin-contact-btn">Submit</button>
+                </div>
+            </form>
             </div>
         </div>
     </div>
