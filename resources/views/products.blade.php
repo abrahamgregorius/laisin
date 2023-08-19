@@ -64,6 +64,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Part Number</th>
+                        <th>Category</th>
                         <th>Car Brand</th>
                         <th>Car Year</th>
                     </tr>
@@ -73,7 +74,8 @@
                         <tr>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->part_number }}</td>
-                            <td>{{ $product->brand->brand_name}}</td>
+                            <td><a href="">{{ $product->category->name }}</a></td>
+                            <td><a href="">{{ $product->brand->brand_name }}</a></td>
                             <td>{{ $product->car_year }}</td>
                         </tr>
                     @endforeach
