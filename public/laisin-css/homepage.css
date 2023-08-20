@@ -317,6 +317,15 @@ header {
     color: white;
 }
 
+.products-more a {
+    text-decoration: none;
+    color: white;
+}
+
+.products-more a:hover {
+    color: white;
+}
+
 .products-more .button {
     display: flex;
     justify-content: center;
