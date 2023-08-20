@@ -67,6 +67,7 @@
     <main>
         @yield('content')
     </main>
+    @include('layout.components.footer')
 
     <script src={{ asset('laisin-js/hamburger.js') }}></script>
     <script src="{{ asset('bootstrap.min.js') }}"></script>

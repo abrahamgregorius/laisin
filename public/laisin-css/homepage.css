@@ -597,7 +597,7 @@ header {
 }
 
 footer {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     position: relative;
     overflow: hidden;
     background-color: var(--main);

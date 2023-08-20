@@ -20,15 +20,15 @@
                 @csrf
                 <div class="mt-2">
                     <label>Name</label>
-                    <input type="text" autocomplete="off" name="name" class="form-control" placeholder="Type Your Name Here">
+                    <input type="text" autocomplete="off" name="name" class="form-control mt-2" placeholder="Type Your Name Here">
                 </div>
                 <div class="mt-2">
                     <label>Email</label>
-                    <input type="email" autocomplete="off" name="email" class="form-control" placeholder="Type Your Email Address Here"> 
+                    <input type="email" autocomplete="off" name="email" class="form-control mt-2" placeholder="Type Your Email Address Here"> 
                 </div>
                 <div class="mt-2">
                     <label>Message</label>
-                    <textarea name="message" placeholder="Type Your Message Here" class="form-control"></textarea>
+                    <textarea name="message" placeholder="Type Your Message Here" class="form-control mt-2"></textarea>
                 </div>
                 <div class="mt-2">
                     <button class="laisin-contact-btn">Submit</button>
