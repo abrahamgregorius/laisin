@@ -17,6 +17,7 @@ class FormController extends Controller
 
     public function admin_index(Form $form) {
         $forms = Form::get();
+
         return view('admin.forms.index', compact('forms'));
     }
 

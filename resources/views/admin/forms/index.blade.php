@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="brands-header d-flex align-items-center justify-content-between my-3">
-    <h3>Categories</h3>
+    <h3>Respondent</h3>
 </div>
 <div class="row">
     <div class="col-12">
@@ -19,9 +19,6 @@
                 <thead>
                    <tr>
                     <td>
-                        ID
-                    </td>
-                    <td>
                        Name
                     </td>
                     <td>
@@ -30,15 +27,14 @@
                     <td>
                        Message
                     </td>
-                    <td>
-                        Action
-                    </td>
                    </tr>
                 </thead>
                 <tbody>
                     @foreach ($forms as $form)
                         <tr>
-
+                            <td>{{ $form->name }}</td>
+                            <td>{{ $form->email }}</td>
+                            <td>{{ $form->message }}</td>
                         </tr>
                     @endforeach
                    
