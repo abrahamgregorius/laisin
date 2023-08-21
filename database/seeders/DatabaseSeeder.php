@@ -71,9 +71,6 @@ class DatabaseSeeder extends Seeder
             'brand_name' => 'Subaru'
         ]);
         
-        Category::create([
-            'name' => "Brake"
-        ]);
 
 
         Category::create([
@@ -99,7 +96,7 @@ class DatabaseSeeder extends Seeder
 
         Product::create([
             'name' => 'Toyota Camry',
-            'part_number' => 'TC45678',
+            'part_number' => 45678,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'brand_id' => 1,
             'category_id' => 1,
@@ -107,17 +104,8 @@ class DatabaseSeeder extends Seeder
         ]);
         
         Product::create([
-            'name' => 'Ford F-150',
-            'part_number' => 'FF98765',
-            'description' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
-            'brand_id' => 4,
-            'category_id' => 2,
-            'car_year' => 2023,
-        ]);
-        
-        Product::create([
             'name' => 'Honda Civic',
-            'part_number' => 'HC12345',
+            'part_number' => 12343,
             'description' => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             'brand_id' => 2,
             'category_id' => 1,
@@ -126,7 +114,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Chevrolet Equinox',
-            'part_number' => 'CE67890',
+            'part_number' => 67891,
             'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             'brand_id' => 3,
             'category_id' => 2,
@@ -135,7 +123,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Nissan Rogue',
-            'part_number' => 'NR23456',
+            'part_number' => 23416,
             'description' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             'brand_id' => 5,
             'category_id' => 1,
@@ -144,7 +132,7 @@ class DatabaseSeeder extends Seeder
 
         Product::create([
             'name' => 'Volkswagen Jetta',
-            'part_number' => 'VJ34567',
+            'part_number' => 34567,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'brand_id' => 6,
             'category_id' => 1,
@@ -153,7 +141,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'BMW X5',
-            'part_number' => 'BX87654',
+            'part_number' => 87654,
             'description' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
             'brand_id' => 7,
             'category_id' => 2,
@@ -162,7 +150,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Mercedes-Benz C-Class',
-            'part_number' => 'MB23456',
+            'part_number' => 23456,
             'description' => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             'brand_id' => 8,
             'category_id' => 1,
@@ -171,7 +159,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Audi A4',
-            'part_number' => 'AA76543',
+            'part_number' => 76543,
             'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             'brand_id' => 9,
             'category_id' => 1,
@@ -180,7 +168,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Subaru Outback',
-            'part_number' => 'SO98765',
+            'part_number' => 98745,
             'description' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             'brand_id' => 10,
             'category_id' => 2,
@@ -189,7 +177,7 @@ class DatabaseSeeder extends Seeder
 
         Product::create([
             'name' => 'Toyota Hyundai',
-            'part_number' => 'TH12345',
+            'part_number' => 12345,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'brand_id' => 1,
             'category_id' => 1,
@@ -198,7 +186,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Honda Accord',
-            'part_number' => 'HA67890',
+            'part_number' => 67890,
             'description' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
             'brand_id' => 2,
             'category_id' => 1,
@@ -207,7 +195,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Chevrolet Silverado',
-            'part_number' => 'CS54321',
+            'part_number' => 54321,
             'description' => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             'brand_id' => 3,
             'category_id' => 2,
@@ -216,7 +204,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Ford Mustang',
-            'part_number' => 'FM98765',
+            'part_number' => 98765,
             'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             'brand_id' => 4,
             'category_id' => 2,
@@ -225,7 +213,7 @@ class DatabaseSeeder extends Seeder
         
         Product::create([
             'name' => 'Nissan Sentra',
-            'part_number' => 'NS23456',
+            'part_number' => 23446,
             'description' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             'brand_id' => 5,
             'category_id' => 1,
