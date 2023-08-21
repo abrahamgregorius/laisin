@@ -17,10 +17,11 @@ class BrandController extends Controller
         return view('admin.brands.index', compact("brands"));
     }
 
-    public function brands_search(Request $request){
+    public function brands_search(Request $request
+    ){
         if($request->ajax()){
-            if($request->has('brand_to_search')){
-                $brandToSearch = Brand::where('brand_name','like','%'.$request->brand_to_search.'%')->get();
+            if($request->has('value_to_search')){
+                $brandToSearch = Brand::where('brand_name','like','%'.$request->value_to_search.'%')->get();
                 return response()->json($brandToSearch);
                 
             }

@@ -20,6 +20,18 @@ class ProductController extends Controller
         return view('admin.products.index', compact('products'));
     }
 
+
+    public function products_search(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $brandToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->get();
+                return response()->json($brandToSearch);
+                
+            }
+            return json_encode("Tidak Ada Data Yang Masuk Bjir");
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      */

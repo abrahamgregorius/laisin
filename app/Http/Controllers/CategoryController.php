@@ -18,6 +18,17 @@ class CategoryController extends Controller
         return view('admin.categories.index', compact('categories'));
     }
 
+    public function category_search(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $categoryToSearch = Category::where('name','like','%'.$request->value_to_search.'%')->get();
+                return response()->json($categoryToSearch);
+                
+            }
+            return json_encode("Tidak Ada Data Yang Masuk Bjir");
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      */

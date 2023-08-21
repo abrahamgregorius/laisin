@@ -35,6 +35,7 @@ Route::prefix('/admin')->group(function(){
             Route::controller(ProductController::class)->group(function(){
                 // Index products
                 Route::get('/', 'index')->name('index.products');
+                Route::post('/','products_search')->name('products.search');
                 // Create product
                 Route::get('/create','create')->name('create.product.index');
                 Route::post('/create','store')->name('create.product');
@@ -77,6 +78,7 @@ Route::prefix('/admin')->group(function(){
             Route::controller(CategoryController::class)->group(function(){
                 // Index categories
                 Route::get('/','index')->name('index.categories');
+                Route::post('/','category_search')->name('search_category'); 
                 // Create category
                 Route::get('/create','create')->name('create.category.index');
                 Route::post('/create','store')->name('create.category');
