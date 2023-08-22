@@ -121,6 +121,11 @@ a:hover {
     background-color: #fafafa;
 }
 
+.laisin-products-page {
+    height: 100%;
+    padding-bottom: 40px;
+}
+
 @media only screen and (max-width:600px) {
     .laisin-products-options {
         display: flex;
