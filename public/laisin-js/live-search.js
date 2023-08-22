@@ -46,6 +46,7 @@ class LiveSearch {
             });
         } else {
             this.resultsContainer.html(`<td></td><td style="text-align:center">Not Found Brand With Name : "${this.searchInput.val()}"</td><td></td>`);
+            results.length = 0
         }
     }
 

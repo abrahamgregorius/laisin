@@ -12,7 +12,9 @@
 
 tr {
     border: 1px solid #eee !important;
+    padding: 10px;
 }
+
 
 .table>thead {
     background-color: var(--main);

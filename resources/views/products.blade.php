@@ -59,7 +59,7 @@
             <div  class="table-title">
                 <p>All Products</p>
             </div>
-            <table class="table">
+            <table class="table table-responsive rounded-4 shadow-sm">
                 <thead class="text-white">
                     <tr>
                         <th>Name</th>
