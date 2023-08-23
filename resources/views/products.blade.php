@@ -59,28 +59,31 @@
             <div  class="table-title">
                 <p>All Products</p>
             </div>
-            <table class="table table-responsive rounded-4 shadow-sm">
-                <thead class="text-white">
-                    <tr>
-                        <th>Name</th>
-                        <th>Part Number</th>
-                        <th>Category</th>
-                        <th>Car Brand</th>
-                        <th>Car Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($products as $product)
+            <div class="table-responsive">
+                <table class="table rounded-4 shadow-sm">
+                    <thead class="text-white">
                         <tr>
-                            <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
-                            <td>{{ $product->part_number }}</td>
-                            <td><a href="">{{ $product->category->name }}</a></td>
-                            <td><a href="">{{ $product->brand->brand_name }}</a></td>
-                            <td>{{ $product->car_year }}</td>
+                            <th>Name</th>
+                            <th>Part Number</th>
+                            <th>Category</th>
+                            <th>Car Brand</th>
+                            <th>Car Year</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach($products as $product)
+                            <tr>
+                                <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
+                                <td>{{ $product->part_number }}</td>
+                                <td><a href="">{{ $product->category->name }}</a></td>
+                                <td><a href="">{{ $product->brand->brand_name }}</a></td>
+                                <td>{{ $product->car_year }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+         
         </div>
     </div>
 </section>
