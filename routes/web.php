@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryController; 
 use App\Http\Controllers\FormController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
@@ -12,11 +12,17 @@ use Illuminate\Support\Facades\Route;
 
 // Route guest
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/products', [HomeController::class, 'index_products'])->name('products.index');
-Route::get('/products/categories',[HomeController::class,'all_category'])->name('categories.index');
-Route::get('/products/brands',[HomeController::class,'all_brands'])->name('brands.index');
-Route::get('/products/years',[HomeController::class,'all_years'])->name('brands.years');
-Route::get('/products/{id}', [HomeController::class], 'show');
+
+Route::prefix('/products')->group(function(){
+    Route::get('/', [HomeController::class, 'index_products'])->name('products.index');
+    Route::get('/categories',[HomeController::class,'all_category'])->name('categories.index');
+    Route::get('/brands',[HomeController::class,'all_brands'])->name('brands.index');
+    Route::get('/years',[HomeController::class,'all_years'])->name('brands.years');
+    Route::get('/{slug}', [HomeController::class], 'show');
+});
+
+
+
 Route::get('/contacts', [FormController::class, 'index'])->name('contacts.index');
 Route::post('/contacts', [FormController::class, 'store'])->name('contacts.store');
 // Route::middleware(['guest'])->group(function() {
@@ -44,10 +50,8 @@ Route::prefix('/admin')->group(function(){
                 // Edit product
                 Route::get('/{id}/edit','edit')->name('edit.product');
                 Route::post('/{id}/edit','update')->name('update.product');
-                
-                Route::delete('{id}/delete','destroy')->name('delete.product');
 
-              
+                Route::delete('{id}/delete','destroy')->name('delete.product');
             });
         });
     
