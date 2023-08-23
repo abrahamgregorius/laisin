@@ -41,11 +41,11 @@
                                 alt="img">
                         </div>
                         <div class="laisin-show-product-menu">
-                            <div class="menu-btn">
+                            <div class="menu-btn menu-active">
                                 DESCRIPTION
                             </div>
-                            <div class="menu-btn menu-active">
-                                SPESIFICATION
+                            <div class="menu-btn">
+                                SPECIFICATION
                             </div>
                         </div>
                         <div class="product-description">
