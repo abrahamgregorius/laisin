@@ -50,6 +50,16 @@ class HomeController extends Controller
 
     public function show_per_product(String $slug){
         $product = Product::where('slug',$slug)->first();
-        return view('productshow',compact('product'));
+        $productRelative = Product::where('id', '!=', $product->id)
+        ->where(function ($query) use ($product) {
+            $query->where('name', 'LIKE', '%' . $product->slug . '%')
+                ->orWhere('category_id', $product->category->id)
+                ->orWhere('brand_id', $product->brand_id);
+        })->inRandomOrder()
+        ->take(3)
+        ->get();
+    
+
+        return view('productshow',compact('product','productRelative'));
     }
 }
