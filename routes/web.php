@@ -18,8 +18,8 @@ Route::prefix('/products')->group(function(){
     Route::get('/categories',[HomeController::class,'all_category'])->name('categories.index');
     Route::get('/brands',[HomeController::class,'all_brands'])->name('brands.index');
     Route::get('/years',[HomeController::class,'all_years'])->name('brands.years');
-    Route::get('/{slug}', [HomeController::class], 'show');
 });
+Route::get('/product/{slug}', [HomeController::class,'show_per_product'])->name('products.detail');
 
 
 

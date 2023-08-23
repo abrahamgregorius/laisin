@@ -47,4 +47,9 @@ class HomeController extends Controller
     public function all_years(){
         return view('years');
     }
+
+    public function show_per_product(String $slug){
+        $product = Product::where('slug',$slug)->first();
+        return view('productshow',compact('product'));
+    }
 }

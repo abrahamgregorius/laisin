@@ -72,7 +72,7 @@
                 <tbody>
                     @foreach($products as $product)
                         <tr>
-                            <td>{{ $product->name }}</td>
+                            <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
                             <td>{{ $product->part_number }}</td>
                             <td><a href="">{{ $product->category->name }}</a></td>
                             <td><a href="">{{ $product->brand->brand_name }}</a></td>

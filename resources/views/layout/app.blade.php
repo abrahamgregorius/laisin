@@ -68,8 +68,9 @@
         @yield('content')
     </main>
     @include('layout.components.footer')
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src={{ asset('laisin-js/hamburger.js') }}></script>
+    <script src="{{ asset('laisin-js/laisin-product.js') }}"></script>
     <script src="{{ asset('bootstrap.min.js') }}"></script>
 </body>
 </html>
