@@ -30,7 +30,7 @@
     <section class="laisin-products-show">
         <div class="container mx-auto mt-4">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="product">
                         <div class="product-title">
                             <label>Product Name</label>
@@ -113,6 +113,9 @@
                             </table>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-1">
+
                 </div>
                 <div class="relative-product col-md-3">
                     <div class="relative-wrappers">
