@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 
 // Route guest
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-<<<<<<< Updated upstream
 
 Route::prefix('/products')->group(function(){
     Route::get('/', [HomeController::class, 'index_products'])->name('products.index');
@@ -24,15 +23,6 @@ Route::get('/product/{slug}', [HomeController::class,'show_per_product'])->name(
 
 
 
-=======
-Route::get('/products', [HomeController::class, 'index_products'])->name('products.index');
-Route::get('/products/categories',[HomeController::class,'all_category'])->name('categories.index');
-Route::get('/products/categories/{slug}', [HomeController::class, 'show'])->name('categories.show');
-
-Route::get('/products/brands',[HomeController::class,'all_brands'])->name('brands.index');
-Route::get('/products/years',[HomeController::class,'all_years'])->name('brands.years');
-Route::get('/products/{id}', [HomeController::class], 'show');
->>>>>>> Stashed changes
 Route::get('/contacts', [FormController::class, 'index'])->name('contacts.index');
 Route::post('/contacts', [FormController::class, 'store'])->name('contacts.store');
 // Route::middleware(['guest'])->group(function() {
@@ -60,13 +50,6 @@ Route::prefix('/admin')->group(function(){
                 // Edit product
                 Route::get('/{id}/edit','edit')->name('edit.product');
                 Route::post('/{id}/edit','update')->name('update.product');
-<<<<<<< Updated upstream
-=======
-
-
-
-                Route::delete('{id}/delete','destroy')->name('delete.product');
->>>>>>> Stashed changes
 
                 Route::delete('{id}/delete','destroy')->name('delete.product');
             });

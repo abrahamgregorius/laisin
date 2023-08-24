@@ -117,7 +117,7 @@
                 <div class="relative-product col-md-3">
                     <div class="relative-wrappers">
                         <div class="relative-title">
-                            <h5>Related Product</h5>
+                            <h5>Relative Product</h5>
                         </div>
                         <div class="relative-product-list">
                         @foreach($productRelative as $relative)
