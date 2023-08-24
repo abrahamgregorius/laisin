@@ -48,7 +48,7 @@ class HomeController extends Controller
         return view('years');
     }
 
-    public function show_per_product(String $slug){
+    public function show_per_product(string $slug){
         $product = Product::where('slug',$slug)->first();
         $productRelative = Product::where('id', '!=', $product->id)
         ->where(function ($query) use ($product) {
@@ -59,7 +59,6 @@ class HomeController extends Controller
         ->take(3)
         ->get();
     
-
         return view('productshow',compact('product','productRelative'));
     }
 }

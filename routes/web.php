@@ -86,6 +86,8 @@ Route::prefix('/admin')->group(function(){
                 // Create category
                 Route::get('/create','create')->name('create.category.index');
                 Route::post('/create','store')->name('create.category');
+                
+                
                 // Show category
                 Route::get('{slug}/detail','show')->name('show.category');
                 // Edit category

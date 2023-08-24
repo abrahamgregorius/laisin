@@ -20,7 +20,7 @@ tr {
 }
 
 .laisin-breadcrumb {
-    margin-left: -50px;
+    margin-left: -49px;
     padding-top: 15px;
 }
 
@@ -185,7 +185,7 @@ a:hover {
 
 .relative-product {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .product-relative {
@@ -213,10 +213,7 @@ a:hover {
 
 .relative-title {
     padding: 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid var(--main);
+    border-bottom: 1px solid var(--laisin);
 }
 
 .relative-wrappers {
@@ -260,9 +257,5 @@ a:hover {
         text-align: center;
         padding: 10px 40px;
         font-weight: 500;
-    }
-    .laisin-breadcrumb {
-        margin-left: -30px;
-        padding-top: 15px;
     }
 }

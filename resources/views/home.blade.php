@@ -68,7 +68,7 @@
                     </svg>
                 </div>
             </a>
-            </div>
+        </div>
     </div>
 </div>
 <div class="laisin-aboutus">
