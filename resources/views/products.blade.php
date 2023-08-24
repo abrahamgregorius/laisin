@@ -55,8 +55,8 @@
               </svg>
             <input type="text" placeholder="Search Product Name" class="form-control">
         </div>
-        <div class="laisin-table">
-            <div  class="table-title">
+        <div class="laisin-table ">
+            <div class="table-title">
                 <p>All Products</p>
             </div>
             <div class="table-responsive">

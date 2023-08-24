@@ -48,6 +48,7 @@ class HomeController extends Controller
         return view('years');
     }
 
+<<<<<<< Updated upstream
     public function show_per_product(String $slug){
         $product = Product::where('slug',$slug)->first();
         $productRelative = Product::where('id', '!=', $product->id)
@@ -62,4 +63,11 @@ class HomeController extends Controller
 
         return view('productshow',compact('product','productRelative'));
     }
+=======
+    public function show(string $slug){
+        $products = Product::where('')->get();
+        // dd($products);
+    }
+
+>>>>>>> Stashed changes
 }

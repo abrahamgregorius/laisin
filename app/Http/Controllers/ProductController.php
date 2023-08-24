@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -46,6 +47,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         Product::create([
             'name' => $request->product_name,
             'part_number' => $request->part_number,
