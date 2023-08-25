@@ -75,7 +75,7 @@
                             <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
                             <td>{{ $product->part_number }}</td>
                             <td><a href="/products/category/{{ $product->category->slug }}">{{ $product->category->name }}</a></td>
-                            <td><a href="/products/brands/">{{ $product->brand->brand_name }}</a></td>
+                            <td><a href="/products/brand/{{ $product->brand->slug }}">{{ $product->brand->brand_name }}</a></td>
                             <td>{{ $product->car_year }}</td>
                         </tr>
                     @endforeach

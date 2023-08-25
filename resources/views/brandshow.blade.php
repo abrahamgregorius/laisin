@@ -19,7 +19,7 @@
 
 <section class="laisin-products-page">
     <div class="container mx-auto mt-4">
-        <h4>{{ $brand->name }} Products</h4>
+        <h4>{{ $brand->brand_name }} Products</h4>
         {{-- <div class="laisin-products-options">
             <a href="{{ route('categories.index') }}" class="options-category">
                 <div class="wrappers-options-category">
@@ -57,7 +57,7 @@
         </div>
         <div class="laisin-table ">
             <div class="table-title">
-                <p>{{ $brand->name }} Products</p>
+                <p>{{ $brand->brand_name }} Products</p>
             </div>
             <table class="table table-responsive rounded-4 shadow-sm">
                 <thead class="text-white">
@@ -72,10 +72,10 @@
                 <tbody>
                     @foreach($products as $product)
                         <tr>
-                            <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
+                            <td>{{ $product->name }}</td>
                             <td>{{ $product->part_number }}</td>
                             <td><a href="/products/category/{{ $product->category->slug }}">{{ $product->category->name }}</a></td>
-                            <td><a href="/products/brands/">{{ $product->brand->brand_name }}</a></td>
+                            <td><a href="/products/brand/{{ $product->brand->slug }}">{{ $product->brand->brand_name }}</a></td>
                             <td>{{ $product->car_year }}</td>
                         </tr>
                     @endforeach
