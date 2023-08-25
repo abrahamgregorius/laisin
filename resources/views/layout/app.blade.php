@@ -16,7 +16,9 @@
     <header>
         <nav class="laisin-navbar container">
             <div class="laisin-brand">
-                <img src="{{ asset("assets/laisin.png") }}" alt="">
+                <a href="/">
+                    <img src="{{ asset("assets/laisin.png") }}" alt="">
+                </a>
             </div>
             <ul class="laisin-menu">
                 <li class="@if(request()->routeIs('home.index')) laisin-active @endif"><a href="{{ route('home.index') }}">Home</a></li>
