@@ -170,6 +170,16 @@ a:hover {
     width: 100%;
 }
 
+@keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+
+
 .hidden {
     display: none;
 }
