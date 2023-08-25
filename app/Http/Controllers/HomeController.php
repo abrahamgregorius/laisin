@@ -49,16 +49,6 @@ class HomeController extends Controller
         return view('years');
     }
 
-    public function show_product(string $slug){
-        $product = Product::where('slug',$slug)->first();
-        $productRelative = Product::where('id', '!=', $product->id)
-        ->where(function ($query) use ($product) {
-            $query->where('name', 'LIKE', '%' . $product->slug . '%')
-                ->orWhere('category_id', $product->category->id)
-                ->orWhere('brand_id', $product->brand_id);
-        })->inRandomOrder()
-        ->take(3)
-        ->get();
     public function show_per_product(string $slug){
             $product = Product::where('slug',$slug)->firstOrFail();
             $productRelative = Product::where('id', '!=', $product->id)
