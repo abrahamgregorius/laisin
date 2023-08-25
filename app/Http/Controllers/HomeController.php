@@ -48,7 +48,7 @@ class HomeController extends Controller
         return view('years');
     }
 
-    public function show_per_product(string $slug){
+    public function show_product(string $slug){
         $product = Product::where('slug',$slug)->first();
         $productRelative = Product::where('id', '!=', $product->id)
         ->where(function ($query) use ($product) {
@@ -66,4 +66,21 @@ class HomeController extends Controller
         $brand = Brand::where('slug',$slug)->first();
         return view('brandshow',compact('brand'));
     }
+
+    public function show_category(string $slug) {
+        $category = Category::where('slug', $slug)->first();
+        
+        $products = Product::where('category_id', $category->id)->get();
+
+        return view('categoryshow', compact('category', 'products'));
+    }
+
+    public function show_brand(string $slug) {
+        $brand = Brand::where('slug', $slug)->first();
+        
+        $products = Product::where('brand_id', $brand->id)->get();
+
+        return view('brandshow', compact('brand', 'products'));
+    }
+
 }
