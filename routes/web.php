@@ -16,8 +16,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::prefix('/products')->group(function(){
     Route::get('/', [HomeController::class, 'index_products'])->name('products.index');
     Route::get('/categories',[HomeController::class,'all_category'])->name('categories.index');
+    Route::get('/category/{slug}',[HomeController::class,'all_category'])->name('categories.show');
     Route::get('/brands',[HomeController::class,'all_brands'])->name('brands.index');
-    Route::get('/years',[HomeController::class,'all_years'])->name('brands.years');
+    Route::get('/brand/{slug}',[HomeController::class,'all_brands'])->name('brands.show');
+    Route::get('/years', [HomeController::class,'all_years'])->name('brands.years');
 });
 Route::get('/product/{slug}', [HomeController::class,'show_per_product'])->name('products.detail');
 
