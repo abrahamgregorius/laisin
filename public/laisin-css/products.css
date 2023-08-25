@@ -210,7 +210,14 @@ a:link:hover , a:visited:hover {
 
 .relative-product {
     display: flex;
+    height: 100%;
+    position: relative;
     justify-content: center;
+}
+
+.relative-wrappers {
+    position: sticky;
+    top: 0px;
 }
 
 .product-relative {

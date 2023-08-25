@@ -61,4 +61,9 @@ class HomeController extends Controller
     
         return view('productshow',compact('product','productRelative'));
     }
+
+    public function show_per_brand(string $slug){
+        $brand = Brand::where('slug',$slug)->first();
+        return view('brandshow',compact('brand'));
+    }
 }

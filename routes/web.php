@@ -20,6 +20,8 @@ Route::prefix('/products')->group(function(){
     Route::get('/years',[HomeController::class,'all_years'])->name('brands.years');
 });
 Route::get('/product/{slug}', [HomeController::class,'show_per_product'])->name('products.detail');
+Route::get('/brand/{slug}',[HomeController::class,'show_per_brand'])->name('brands.detail');
+
 
 
 
