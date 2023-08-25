@@ -74,7 +74,7 @@
                 </thead>
                 <tbody>
                     {{-- @foreach($categories as $category)
-                        <tr>
+                        <tr class="table-item">
                             <td>{{ $category->name }}</td>
                             <td>{{ count($categories) }}</td>
                         </tr>

@@ -15,6 +15,10 @@ tr {
     padding: 10px;
 }
 
+.table-item:hover {
+    background-color: lightgray;
+}
+
 .table>thead {
     background-color: var(--main);
 }

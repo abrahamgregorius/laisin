@@ -74,8 +74,8 @@
             </thead>
             <tbody>
                 @foreach($brands as $brand)
-                    <tr>
-                        <td><a href="{{ route('brands.show',$brand->slug) }}">{{ $brand->brand_name }}</a></td>
+                    <tr class="table-item">
+                        <td><a href="{{ route('brands.show',$brand->slug)}}">{{ $brand->brand_name }}</a></td>
                         <td>{{ count($brands) }}</td>
                     </tr>
                 @endforeach

@@ -71,8 +71,8 @@
                 </thead>
                 <tbody>
                     @foreach($products as $product)
-                        <tr>
-                            <td>{{ $product->name }}</td>
+                        <tr class="table-item">
+                            <td><a href="/product/{{ $product->slug }}">{{ $product->name }}</a></td>
                             <td>{{ $product->part_number }}</td>
                             <td><a href="/products/category/{{ $product->category->slug }}">{{ $product->category->name }}</a></td>
                             <td><a href="/products/brand/{{ $product->brand->slug }}">{{ $product->brand->brand_name }}</a></td>
