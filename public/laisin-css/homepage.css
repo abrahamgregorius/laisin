@@ -655,6 +655,23 @@
      z-index: 2;
  }
 
+ .not-found {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+ 
+ .not-found p {
+    font-size: 48px;
+ }
+
+
+
+
+
  @media only screen and (max-width:600px) {
      .laisin-menu {
          display: none;
