@@ -15,7 +15,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::prefix('/products')->group(function(){
     Route::get('/', [HomeController::class, 'index_products'])->name('products.index');
+    Route::post('/',[HomeController::class,'search_products'])->name('search.products');
     Route::get('/categories',[HomeController::class,'all_category'])->name('categories.index');
+    Route::post('/categories',[HomeController::class,'search_categories'])->name('categories.search');
     Route::get('/category/{slug}',[HomeController::class,'show_category'])->name('categories.show');
     Route::get('/brands',[HomeController::class,'all_brands'])->name('brands.index');
     Route::get('/brand/{slug}',[HomeController::class,'show_brand'])->name('brands.show');

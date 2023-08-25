@@ -35,6 +35,29 @@ class HomeController extends Controller
         return view('products', compact('products'));
     } 
 
+    public function search_products(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $productToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->with('category','brand')->get();
+                return response()->json($productToSearch);
+                
+            }
+            return json_encode("There's No Data To Show!");
+        }
+    }
+
+    public function search_categories(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $categoryToSearch = Category::where('name','like','%'.$request->value_to_search.'%')->get();
+                return response()->json($categoryToSearch);
+                
+            }
+            return json_encode("There's No Data To Show!");
+        }
+    }
+
+
     public function all_category(){
         $categories = Category::all();
         return view('categories',compact('categories'));

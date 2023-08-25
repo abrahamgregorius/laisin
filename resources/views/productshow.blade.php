@@ -130,7 +130,7 @@
                                 <p>{{ $relative->category->name }}</p>
                             </div>
                             <div class="product-relative-img">
-                                <img src="https://autoimage.templines.info/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-750x420.jpg" alt="img">
+                                <img src="https://autoimage.templines.info/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-750x420.jpg" alt="img" loading="lazy">
                             </div>
                         </a>
                         

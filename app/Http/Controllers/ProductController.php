@@ -25,7 +25,7 @@ class ProductController extends Controller
     public function products_search(Request $request){
         if($request->ajax()){
             if($request->has('value_to_search')){
-                $brandToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->get();
+                $brandToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->with('brand')->get();
                 return response()->json($brandToSearch);
                 
             }

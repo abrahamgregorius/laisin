@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laisindo Autoparts</title>
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/products.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/contact.css') }}">
@@ -70,7 +71,7 @@
         @yield('content')
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    
+    <script src="{{ asset('laisin-js/live-search.js') }}"></script>
     <script src={{ asset('laisin-js/hamburger.js') }}></script>
     <script src="{{ asset('laisin-js/laisin-product.js') }}"></script>
     <script src="{{ asset('bootstrap.min.js') }}"></script>
