@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class HomeController extends Controller
 {
@@ -49,21 +50,23 @@ class HomeController extends Controller
     }
 
     public function show_per_product(string $slug){
-        $product = Product::where('slug',$slug)->first();
-        $productRelative = Product::where('id', '!=', $product->id)
-        ->where(function ($query) use ($product) {
-            $query->where('name', 'LIKE', '%' . $product->slug . '%')
-                ->orWhere('category_id', $product->category->id)
-                ->orWhere('brand_id', $product->brand_id);
-        })->inRandomOrder()
-        ->take(3)
-        ->get();
+            $product = Product::where('slug',$slug)->firstOrFail();
+            $productRelative = Product::where('id', '!=', $product->id)
+            ->where(function ($query) use ($product) {
+                $query->where('name', 'LIKE', '%' . $product->slug . '%')
+                    ->orWhere('category_id', $product->category->id)
+                    ->orWhere('brand_id', $product->brand_id);
+            })->inRandomOrder()
+            ->take(3)
+            ->get();
+    
     
         return view('productshow',compact('product','productRelative'));
-    }
+    }   
 
     public function show_per_brand(string $slug){
-        $brand = Brand::where('slug',$slug)->first();
+
+        $brand = Brand::where('slug',$slug)->firstOrFail();
         return view('brandshow',compact('brand'));
     }
 }
