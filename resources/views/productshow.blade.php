@@ -120,11 +120,11 @@
                 <div class="relative-product col-md-3">
                     <div class="relative-wrappers">
                         <div class="relative-title">
-                            <h5>Relative Product</h5>
+                            <h5>Related Product</h5>
                         </div>
                         <div class="relative-product-list">
                         @foreach($productRelative as $relative)
-                        <div class="product-relative">
+                        <a href="{{ route('products.detail',$relative->slug) }}" class="product-relative">
                             <div class="product-relative-description">
                                 <p class="relative-product-title">{{ $relative->name }}</p>
                                 <p>{{ $relative->category->name }}</p>
@@ -132,7 +132,8 @@
                             <div class="product-relative-img">
                                 <img src="https://autoimage.templines.info/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-750x420.jpg" alt="img">
                             </div>
-                        </div>
+                        </a>
+                        
                         @endforeach
 
                      </div>

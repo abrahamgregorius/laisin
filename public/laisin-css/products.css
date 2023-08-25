@@ -184,6 +184,17 @@ a:hover {
     display: none;
 }
 
+a , a:link , a:visited {
+    color: #1f2630;
+    text-decoration: none;
+}
+
+a:link:hover , a:visited:hover {
+    color: var(--laisin);
+    text-decoration: underline;
+}
+
+
 .laisin-products-table {
     margin-top: 15px;
 }
