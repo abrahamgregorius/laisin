@@ -124,7 +124,7 @@
                         </div>
                         <div class="relative-product-list">
                         @foreach($productRelative as $relative)
-                        <a href="{{ route('products.detail',$relative->slug) }}" class="product-relative">
+                        <a class="product-relative anchor-related" href="{{ route('products.detail',$relative->slug) }}" class="product-relative">
                             <div class="product-relative-description">
                                 <p class="relative-product-title">{{ $relative->name }}</p>
                                 <p>{{ $relative->category->name }}</p>

@@ -191,9 +191,13 @@ a , a:link , a:visited {
 
 a:link:hover , a:visited:hover {
     color: var(--laisin);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
+.anchor-related:hover {
+    color: var(--laisin);
+    text-decoration: underline;
+}
 
 .laisin-products-table {
     margin-top: 15px;
