@@ -70,7 +70,7 @@ class HomeController extends Controller
     }
 
     public function show_category(string $slug) {
-        $category = Category::where('slug', $slug)->first();
+        $category = Category::where('slug', $slug)->firstOrFail();
         
         $products = Product::where('category_id', $category->id)->get();
 
@@ -78,7 +78,7 @@ class HomeController extends Controller
     }
 
     public function show_brand(string $slug) {
-        $brand = Brand::where('slug', $slug)->first();
+        $brand = Brand::where('slug', $slug)->firstOrFail();
         
         $products = Product::where('brand_id', $brand->id)->get();
 
