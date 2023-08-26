@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->integer('part_number')->unique();
+            $table->string('part_number')->unique();
             $table->text('description');
             $table->foreignId('brand_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->integer('car_year');
+            $table->integer('car_year')->nullable();
+            $table->text('thumbnail')->nullable();
             $table->timestamps();
         });
     }

@@ -8,16 +8,16 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('create.product') }}" method="POST">
+                <form action="{{ route('create.product') }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     {{-- Name --}}
-                    <label for="product_name" class="form-label">Product Name</label>
-                    <input autocomplete="off" type="text" name="product_name" class="form-control" placeholder="Type Product Name Here">
+                    <label for="product_name" class="form-label">Production ID</label>
+                    <input autocomplete="off" type="text" name="product_name" class="form-control" placeholder="Type Production ID Here">
                     
                     {{-- Part number --}}
                     <div class="mb-2"></div>
                     <label for="part_number" class="form-label">Part Number</label>
-                    <input autocomplete="off" type="number" name="part_number" class="form-control" placeholder="Type Part Number Here">
+                    <input autocomplete="off" type="text    " name="part_number" class="form-control" placeholder="Type Part Number Here">
                     
                     {{-- Description --}}
                     <div class="mb-2"></div>
@@ -46,8 +46,15 @@
                     <div class="mb-2"></div>
                     <label for="year">Car Year</label>
                     <input type="number" name="car_year" class="form-control">
-                    <div class="mb-2">
-                    </div>
+                    
+                    
+                    {{-- Thumbnail upload --}}
+                    <div class="mb-2"></div>
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="file" name="thumbnail" class="form-control">
+                    
+                    
+                    <div class="mb-2"></div>
                     <button class="btn btn-primary float-right mt-4">Submit</button>
                 </form>
             </div>

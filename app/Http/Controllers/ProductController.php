@@ -47,17 +47,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-
-        Product::create([
-            'name' => $request->product_name,
-            'part_number' => $request->part_number,
-            'description' => $request->description,
-            'brand_id' => $request->brand_id,
-            'category_id' => $request->category_id,
-            'car_year' => $request->car_year
+        $validatedData = $request->validate([
+            'name' => 'required|string',
+            'part_number' => 'required|unique:products',
+            'description' => 'required|string',
+            'brand_id' => 'required|exists:brands,id',
+            'category_id' => 'required|exists:categories,id',
+            'car_year' => 'nullable|integer',
+            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
-        return redirect('/admin/products');
+    
+        if ($request->hasFile('thumbnail')) {
+            $thumbnail = $request->file('thumbnail');
+            $thumbnailPath = time() . '_' . $thumbnail->getClientOriginalName();
+            $thumbnail->storeAs('thumbnails', $thumbnailPath); // Store in storage/app/thumbnails
+            $validatedData['thumbnail'] = $thumbnailPath;
+        }
+    
+        Product::create($validatedData);
+    
+        return redirect('/admin/products')->with('success', 'Product created successfully.');        
     }
 
     /**
