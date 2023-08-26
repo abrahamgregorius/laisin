@@ -118,6 +118,12 @@ const productHomepageSearch = new LiveSearch('#search_homepage_product', '#produ
         '<td>' + result.car_year + '</td>'
 }, 'Product')
 
+const categoryHomepageSearch = new LiveSearch('#search_category_homepage_input', '#category_homepage_data', function(result, routing, createButtons) {
+    return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
+        '<td>' + result.productCount + '</td>'
+}, 'Category')
+
 const brandsHomepageSearch = new LiveSearch('#search-homepage-brand', '#search-homepage-brand-data', function(result, routing, createButtons) {
     return '<td>' + result.name + '</td>'
+
 })

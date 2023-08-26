@@ -50,6 +50,9 @@ class HomeController extends Controller
         if($request->ajax()){
             if($request->has('value_to_search')){
                 $categoryToSearch = Category::where('name','like','%'.$request->value_to_search.'%')->get();
+                foreach($categoryToSearch as $perCategory){
+                    $perCategory->productCount = $perCategory->products()->count();
+                }
                 return response()->json($categoryToSearch);
                 
             }
