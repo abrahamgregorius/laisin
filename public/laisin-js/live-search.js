@@ -119,11 +119,12 @@ const productHomepageSearch = new LiveSearch('#search_homepage_product', '#produ
 }, 'Product')
 
 const categoryHomepageSearch = new LiveSearch('#search_category_homepage_input', '#category_homepage_data', function(result, routing, createButtons) {
-    return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
+    return '<td><a href="' + routing(result.slug, '', true, 'products/category') + '">' + result.name + '</a></td>' +
         '<td>' + result.productCount + '</td>'
-}, 'Category')
+}, 'Category') 
 
 const brandsHomepageSearch = new LiveSearch('#search-homepage-brand', '#search-homepage-brand-data', function(result, routing, createButtons) {
-    return '<td>' + result.name + '</td>'
+    return '<td><a href="' + routing(result.slug,'',true,'products/brand') + '">' + result.brand_name + '</a></td>' +
+           '<td>' + result.productCount + '</td>'
+},'Brand')
 
-})

@@ -59,6 +59,19 @@ class HomeController extends Controller
             return json_encode("There's No Data To Show!");
         }
     }
+    
+    public function search_brands(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $brandToSearch = Brand::where('brand_name','like','%'.$request->value_to_search.'%')->get();
+                foreach($brandToSearch as $perBrand){
+                    $perBrand->productCount = $perBrand->products()->count();
+                }
+                return response()->json($brandToSearch);
+            }
+            return json_encode("There's No Data To Show!");
+        }
+    }
 
 
     public function all_category(){
@@ -67,7 +80,7 @@ class HomeController extends Controller
     }
 
     public function all_brands(){
-        $brands = Brand::all();
+        $brands = Brand::with('products')->get();
         return view('brands',compact('brands'));
     }
 

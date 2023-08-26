@@ -20,7 +20,7 @@ Route::prefix('/products')->group(function(){
     Route::post('/categories',[HomeController::class,'search_categories'])->name('categories.search');
     Route::get('/category/{slug}',[HomeController::class,'show_category'])->name('categories.show');
     Route::get('/brands',[HomeController::class,'all_brands'])->name('brands.index');
-    Route::get('/brands',[HomeController::class,'search_brands'])->name('brands.index');
+    Route::post('/brands',[HomeController::class,'search_brands'])->name('brands.index');
     Route::get('/brand/{slug}',[HomeController::class,'show_brand'])->name('brands.show');
     Route::get('/years', [HomeController::class,'all_years'])->name('brands.years');
 });
