@@ -62,7 +62,7 @@
             <table class="table table-responsive rounded-4 shadow-sm">
                 <thead class="text-white">
                     <tr>
-                        <th>Name</th>
+                        <th>Production ID</th>
                         <th>Part Number</th>
                         <th>Category</th>
                         <th>Car Brand</th>
