@@ -145,10 +145,12 @@ const brandsDetailSearch = new LiveSearch('#brand-detail-search', '#brand-detail
         '<td>' + result.part_number + '</td>' +
         '<td><a href="' + routing(result.slug, '', true, 'category') + '">' + result.category.name + '</a></td>' +
         '<td>' + result.brand.brand_name + '</td>' +
-        '<td>' + result.car_year + '</td>'
+        '<td><a href="' + routing(result.car_year, '', true, 'products/year') + '">' + result.car_year + '</a></td>'
 }, 'Brand')
 
 const yearHomepageSearch = new LiveSearch('#search_homepage_year', '#search_homepage_year_data', function(result, routing, createButtons) {
     return '<td><a href="' + routing(result.car_year, '', true, 'products/year') + '">' + result.car_year + '</a></td>' +
         '<td>' + result.product_count + '</td>'
 }, 'Year')
+
+const yearHomepageDetailSearch = new LiveSearch('')
