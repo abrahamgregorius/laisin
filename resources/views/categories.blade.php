@@ -60,7 +60,7 @@
               </svg>
             <input type="text" placeholder="Search Category Name" class="form-control" id="search_category_homepage_input">
         </div>
-        <div class="laisin-table">
+        <div class="laisin-table table-responsive">
             <div  class="table-title">
                 <p>All Categories</p>
             </div>

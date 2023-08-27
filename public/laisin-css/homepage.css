@@ -666,6 +666,9 @@
      .laisin-menu {
          display: none;
      }
+     .laisin-breadcrumb {
+         padding-left: 20px;
+     }
      .hamburger {
          display: block;
      }

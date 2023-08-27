@@ -67,7 +67,7 @@
               </svg>
             <input alt="{{ $brand->id }}" id="brand-detail-search" type="text" placeholder="Search Product Name" class="form-control">
         </div>
-        <div class="laisin-table ">
+        <div class="laisin-table">
             <div class="table-title">
                 <p>{{ $brand->brand_name }} Products</p>
             </div>

@@ -61,11 +61,11 @@
               </svg>
             <input alt="{{ $category->id }}" id="search-category-detail-search" type="text" placeholder="Search Product Name" class="form-control">
         </div>
-        <div class="laisin-table ">
+        <div class="laisin-table table-responsive">
             <div class="table-title">
                 <p>{{ $category->name }} Products</p>
             </div>
-            <table class="table table-responsive rounded-4 shadow-sm">
+            <table class="table rounded-4 shadow-sm">
                 <thead class="text-white">
                     <tr>
                         <th>Name</th>

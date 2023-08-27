@@ -55,11 +55,12 @@
               </svg>
             <input id="search_homepage_product" type="text" placeholder="Search Product Name" class="form-control">
         </div>
-        <div class="laisin-table ">
+        <div class="laisin-table table-responsive">
             <div class="table-title">
                 <p>All Products</p>
             </div>
-            <table class="table table-responsive rounded-4 shadow-sm">
+            
+            <table class="table  rounded-4 shadow-sm">
                 <thead class="text-white">
                     <tr>
                         <th>Production ID</th>

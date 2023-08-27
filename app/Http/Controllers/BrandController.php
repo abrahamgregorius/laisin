@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -55,7 +56,8 @@ class BrandController extends Controller
     public function show(Brand $brand, string $id)
     {
         $data = Brand::where('id', $id)->first();
-        return view('admin.brands.show', compact('data'));
+        $productContain = Product::where('brand_id',$id)->get();
+        return view('admin.brands.show', compact('data','productContain'));
     }
 
     /**
