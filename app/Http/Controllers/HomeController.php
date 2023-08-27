@@ -59,6 +59,18 @@ class HomeController extends Controller
             return json_encode("There's No Data To Show!");
         }
     }
+
+    public function search_detail_category(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search')){
+                $productToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->with('category','brand')->get();
+                return response()->json($productToSearch);                
+            }
+            return json_encode("There's No Data To Show!");
+        }
+    }
+
+   
     
     public function search_brands(Request $request){
         if($request->ajax()){
@@ -73,6 +85,21 @@ class HomeController extends Controller
         }
     }
 
+    public function search_brands_detail(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search') && $request->has('current_slug')){
+                $productToSearch = Product::where('brand_id', $request->current_slug)
+                    ->where('name', 'like', '%' . $request->value_to_search . '%')
+                    ->with('category', 'brand')
+                    ->get();
+                return response()->json($productToSearch);                
+            }
+            return response()->json(["message" => "There's No Data To Show!"]);
+        }
+    }
+    
+    
+
 
     public function all_category(){
         $categories = Category::all();
@@ -85,8 +112,36 @@ class HomeController extends Controller
     }
 
     public function all_years(){
-        return view('years');
+        $years = Product::pluck('car_year')->unique();
+        $productCounts = [];
+        $years->productCount = $productCounts;
+        foreach ($years as $year) {
+            $count = Product::where('car_year', $year)->count();
+            $productCounts[$year] = $count;
+        }
+    
+        return view('years', compact('years', 'productCounts'));
     }
+
+    public function show_per_years(string $slug){
+        $yearproducts = Product::where('car_year',$slug)->get();
+        return view('showyear',compact('yearproducts','slug'));
+    }    
+
+    public function search_year(Request $request) {
+        if ($request->ajax()) {
+            if ($request->has('value_to_search')) {
+                $yearToSearch = Product::where('car_year', 'like', '%' . $request->value_to_search . '%')
+                                       ->selectRaw('car_year, COUNT(*) as product_count')
+                                       ->groupBy('car_year')
+                                       ->get();
+    
+                return response()->json($yearToSearch);
+            }
+            return response()->json("There's No Data To Show!");
+        }
+    }
+    
 
     public function show_per_product(string $slug){
             $product = Product::where('slug',$slug)->firstOrFail();

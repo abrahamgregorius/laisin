@@ -75,7 +75,7 @@
                     @foreach($categories as $category)
                         <tr class="table-item">
                             <td><a href="{{ route('categories.show', $category->slug) }}">{{ $category->name }}</a></td>
-                            <td>{{ count($categories) }}</td>
+                            <td>{{ count($category->products) }}</td>
                         </tr>
                     @endforeach
                 </tbody>

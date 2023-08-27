@@ -10,7 +10,13 @@
               </svg>
             </li>
             <li>
-                <a href="{{ route('categories.index') }}" style="color:#f8470a">Categories</a>
+                <a href="{{ route('categories.index') }}">Categories</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </li>
+            <li>
+                <a href="{{ route('categories.index') }}" style="color:#f8470a">{{ $category->name }}</a>
             </li>
         </ul>
     </div>
@@ -20,7 +26,7 @@
 <section class="laisin-products-page">
     <div class="container mx-auto mt-4">
         <h4>{{ $category->name }} Products</h4>
-        {{-- <div class="laisin-products-options">
+        <div class="laisin-products-options">
             <a href="{{ route('categories.index') }}" class="options-category">
                 <div class="wrappers-options-category">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f8470a" class="bi bi-box" viewBox="0 0 16 16">
@@ -48,12 +54,12 @@
                     By Car Year
                 </div>
             </a>
-        </div> --}}
+        </div>
         <div class="laisin-search">
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8e99a4;" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
               </svg>
-            <input type="text" placeholder="Search Product Name" class="form-control">
+            <input id="search-category-detail-search" type="text" placeholder="Search Product Name" class="form-control">
         </div>
         <div class="laisin-table ">
             <div class="table-title">
@@ -69,7 +75,7 @@
                         <th>Car Year</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="category-detail-data">
                     @foreach($products as $product)
                         <tr>
                             <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>

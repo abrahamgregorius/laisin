@@ -4,6 +4,7 @@ class LiveSearch {
         this.resultsContainer = $(resultsContainerId);
         this.token = $('meta[name="_token"]').attr('content');
         this.resultTemplate = resultTemplate
+        this.currentSlug = $('.form-control').attr('alt')
         this.errorHandlingTitle = errorHandlingTitle
         this.setupEventListeners();
     }
@@ -21,11 +22,13 @@ class LiveSearch {
 
     performSearch(valueSearch) {
         this.resultsContainer.html('<div class="loading">Loading...</div>');
+        console.log(this.currentSlug)
         $.ajax({
             type: "POST",
             url: window.location.pathname,
             data: {
                 "value_to_search": valueSearch,
+                "current_slug": this.currentSlug,
                 "_token": this.token
             },
             dataType: 'json',
@@ -43,6 +46,7 @@ class LiveSearch {
         this.clearResults();
         if (results.length > 0) {
             results.forEach((result) => {
+                console.log(result)
                 const resultElement = this.createResultElement(result);
                 this.resultsContainer.append(resultElement);
             });
@@ -121,10 +125,30 @@ const productHomepageSearch = new LiveSearch('#search_homepage_product', '#produ
 const categoryHomepageSearch = new LiveSearch('#search_category_homepage_input', '#category_homepage_data', function(result, routing, createButtons) {
     return '<td><a href="' + routing(result.slug, '', true, 'products/category') + '">' + result.name + '</a></td>' +
         '<td>' + result.productCount + '</td>'
-}, 'Category') 
+}, 'Category')
+
+const categoryHomepageDetailSearch = new LiveSearch('#search-category-detail-search', '#category-detail-data', function(result, routing, createButtons) {
+    return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
+        '<td>' + result.part_number + '</td>' +
+        '<td>' + result.category.name + '</td>' +
+        '<td>' + result.brand.brand_name + '</td>' +
+        '<td>' + result.car_year + '</td>'
+}, 'Category')
 
 const brandsHomepageSearch = new LiveSearch('#search-homepage-brand', '#search-homepage-brand-data', function(result, routing, createButtons) {
-    return '<td><a href="' + routing(result.slug,'',true,'products/brand') + '">' + result.brand_name + '</a></td>' +
-           '<td>' + result.productCount + '</td>'
-},'Brand')
+    return '<td><a href="' + routing(result.slug, '', true, 'products/brand') + '">' + result.brand_name + '</a></td>' +
+        '<td>' + result.productCount + '</td>'
+}, 'Brand')
 
+const brandsDetailSearch = new LiveSearch('#brand-detail-search', '#brand-detail-data', function(result, routing, createButtons) {
+    return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
+        '<td>' + result.part_number + '</td>' +
+        '<td>' + result.category.name + '</td>' +
+        '<td>' + result.brand.brand_name + '</td>' +
+        '<td>' + result.car_year + '</td>'
+}, 'Brand')
+
+const yearHomepageSearch = new LiveSearch('#search_homepage_year', '#search_homepage_year_data', function(result, routing, createButtons) {
+    return '<td><a href="' + routing(result.car_year, '', true, 'products/year') + '">' + result.car_year + '</a></td>' +
+        '<td>' + result.product_count + '</td>'
+}, 'Year')
