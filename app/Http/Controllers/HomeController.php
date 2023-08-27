@@ -62,8 +62,8 @@ class HomeController extends Controller
 
     public function search_detail_category(Request $request){
         if($request->ajax()){
-            if($request->has('value_to_search')){
-                $productToSearch = Product::where('name','like','%'.$request->value_to_search.'%')->with('category','brand')->get();
+            if($request->has('value_to_search') && $request->has('current_slug')){
+                $productToSearch = Product::where('category_id',$request->current_slug)->where('name','like','%'.$request->value_to_search.'%')->with('category','brand')->get();
                 return response()->json($productToSearch);                
             }
             return json_encode("There's No Data To Show!");

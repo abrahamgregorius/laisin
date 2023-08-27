@@ -130,7 +130,7 @@ const categoryHomepageSearch = new LiveSearch('#search_category_homepage_input',
 const categoryHomepageDetailSearch = new LiveSearch('#search-category-detail-search', '#category-detail-data', function(result, routing, createButtons) {
     return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
         '<td>' + result.part_number + '</td>' +
-        '<td>' + result.category.name + '</td>' +
+        '<td><a href="' + routing(result.category.slug, '', true, 'products/category') + '">' + result.category.name + '</a></td>' +
         '<td>' + result.brand.brand_name + '</td>' +
         '<td>' + result.car_year + '</td>'
 }, 'Category')
@@ -143,7 +143,7 @@ const brandsHomepageSearch = new LiveSearch('#search-homepage-brand', '#search-h
 const brandsDetailSearch = new LiveSearch('#brand-detail-search', '#brand-detail-data', function(result, routing, createButtons) {
     return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
         '<td>' + result.part_number + '</td>' +
-        '<td>' + result.category.name + '</td>' +
+        '<td><a href="' + routing(result.slug, '', true, 'category') + '">' + result.category.name + '</a></td>' +
         '<td>' + result.brand.brand_name + '</td>' +
         '<td>' + result.car_year + '</td>'
 }, 'Brand')
