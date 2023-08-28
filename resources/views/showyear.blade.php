@@ -65,7 +65,7 @@
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8e99a4;" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
               </svg>
-            <input type="text" placeholder="Search Product Name" class="form-control">
+            <input alt="{{ $slug }}" id="search-homepageyearshow" type="text" placeholder="Search Product Name" class="form-control">
         </div>
         <div class="laisin-table table-responsive">
             <div class="table-title">
@@ -81,7 +81,7 @@
                         <th>Car Year</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="search-homepageyearshow-data">
                     @foreach($yearproducts as $product)
                         <tr class="table-item">
                             <td><a href="/product/{{ $product->slug }}">{{ $product->name }}</a></td>

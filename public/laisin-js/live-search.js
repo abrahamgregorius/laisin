@@ -70,7 +70,7 @@ class LiveSearch {
         const urlObject = new URL(window.location.href);
 
         if (UsingCustomUrl) {
-            urlObject.pathname = `/${Url}/${idParameter}/${routeAction}`;
+            urlObject.pathname = `/${Url}/${idParameter}`;
             returnedValue = urlObject.toString();
         } else {
             returnedValue = `${window.location.href}/${idParameter}/${routeAction}`;
@@ -153,4 +153,10 @@ const yearHomepageSearch = new LiveSearch('#search_homepage_year', '#search_home
         '<td>' + result.product_count + '</td>'
 }, 'Year')
 
-const yearHomepageDetailSearch = new LiveSearch('')
+const yearHomepageDetailSearch = new LiveSearch('#search-homepageyearshow', '#search-homepageyearshow-data', function(result, routing, createButtons) {
+    return '<td><a href="' + routing(result.slug, '', true, 'product') + '">' + result.name + '</a></td>' +
+        '<td>' + result.part_number + '</td>' +
+        '<td><a href="' + routing(result.slug, '', true, 'category') + '">' + result.category.name + '</a></td>' +
+        '<td>' + result.brand.brand_name + '</td>' +
+        '<td><a href="' + routing(result.car_year, '', true, 'products/year') + '">' + result.car_year + '</a></td>'
+})

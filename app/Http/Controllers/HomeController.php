@@ -97,6 +97,19 @@ class HomeController extends Controller
             return response()->json(["message" => "There's No Data To Show!"]);
         }
     }
+
+    public function search_years_detail(Request $request){
+        if($request->ajax()){
+            if($request->has('value_to_search') && $request->has('current_slug')){
+                $productToSearch = Product::where('car_year', $request->current_slug)
+                    ->where('name', 'like', '%' . $request->value_to_search . '%')
+                    ->with('category', 'brand')
+                    ->get();
+                return response()->json($productToSearch);                
+            }
+            return response()->json(["message" => "There's No Data To Show!"]);
+        }
+    }
     
     
 

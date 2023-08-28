@@ -26,6 +26,7 @@ Route::prefix('/products')->group(function(){
     Route::post('/brand/{slug}',[HomeController::class,'search_brands_detail'])->name('brand_detail_search');
     Route::get('/years', [HomeController::class,'all_years'])->name('brands.years');
     Route::get('/year/{slug}',[HomeController::class,'show_per_years'])->name('year.detail');
+    Route::post('/year/{slug}',[HomeController::class,'search_years_detail'])->name('search.year.detail');
     Route::post('/years',[HomeController::class,'search_year'])->name('search.years');
 });
 
