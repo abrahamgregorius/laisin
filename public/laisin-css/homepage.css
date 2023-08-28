@@ -314,12 +314,12 @@
      font-size: 25px;
      cursor: pointer;
      justify-content: flex-end;
-     color: white;
+     color: white !important;
  }
  
  .products-more a {
      text-decoration: none;
-     color: white;
+     color: white !important;
  }
  
  .products-more a:hover {
@@ -537,6 +537,7 @@
  
  .need-more-buttons {
      display: flex;
+     width: 100%;
      flex-direction: column;
  }
  

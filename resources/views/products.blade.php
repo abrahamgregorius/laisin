@@ -79,10 +79,35 @@
                             <td><a href="/products/brand/{{ $product->brand->slug }}">{{ $product->brand->brand_name }}</a></td>
                             <td>{{ $product->car_year }}</td>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                        @endforeach
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="pagination">
+                <ul>
+                    <!-- Previous Page Link -->
+                    @if ($products->currentPage() > 1)
+                        <li><a href="{{ $products->previousPageUrl() }}">Previous</a></li>
+                    @endif
+            
+                    <!-- Pagination Links -->
+                    @for ($i = 1; $i <= $products->lastPage(); $i++)
+                        <li class="{{ ($i == $products->currentPage()) ? 'active' : '' }}">
+                            <a href="{{ $products->url($i) }}">{{ $i }}</a>
+                        </li>
+                    @endfor
+            
+                    <!-- Next Page Link -->
+                    @if ($products->currentPage() < $products->lastPage())
+                        <li><a href="{{ $products->nextPageUrl() }}">Next</a></li>
+                    @endif
+            
+                    <!-- Show All Option -->
+                    <li><a href="{{ $products->url('show_all') }}">Show All</a></li>
+                </ul>
+            </div>
+            
     </div>
 </section>
 

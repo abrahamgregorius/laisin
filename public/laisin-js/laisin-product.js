@@ -6,7 +6,7 @@ $('.laisin-show-product-menu').children().on('click', function() {
         $(this).addClass('menu-active');
 
         $('.product-spesification, .product-description').slideToggle('slow'); // Using slideToggle for animation
-        
+
         currentPosition = (currentPosition === 1) ? 2 : 1; // Ternary operator for concise code
     }
 });
