@@ -55,7 +55,7 @@
                     
                     
                     <div class="mb-2"></div>
-                    <button class="btn btn-primary float-right mt-4">Submit</button>
+                    <button type="submit" class="btn btn-primary float-right mt-4">Submit</button>
                 </form>
             </div>
         </div>

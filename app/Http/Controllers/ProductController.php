@@ -56,6 +56,7 @@ class ProductController extends Controller
             'car_year' => 'nullable|integer',
             'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
     
         if ($request->hasFile('thumbnail')) {
             $thumbnail = $request->file('thumbnail');
@@ -63,10 +64,10 @@ class ProductController extends Controller
             $thumbnail->storeAs('thumbnails', $thumbnailPath); // Store in storage/app/thumbnails
             $validatedData['thumbnail'] = $thumbnailPath;
         }
-    
+      
         Product::create($validatedData);
     
-        return redirect('/admin/products')->with('success', 'Product created successfully.');        
+        return redirect(route('admin.index'))->with('success', 'Product created successfully.');        
     }
 
     /**

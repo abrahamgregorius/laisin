@@ -92,11 +92,13 @@
                     @endif
             
                     <!-- Pagination Links -->
+                    @if(request()->page != 'show_all')
                     @for ($i = 1; $i <= $products->lastPage(); $i++)
                         <li class="{{ ($i == $products->currentPage()) ? 'active' : '' }}">
                             <a href="{{ $products->url($i) }}">{{ $i }}</a>
                         </li>
                     @endfor
+                    @endif
             
                     <!-- Next Page Link -->
                     @if ($products->currentPage() < $products->lastPage())
@@ -104,7 +106,7 @@
                     @endif
             
                     <!-- Show All Option -->
-                    <li><a href="{{ $products->url('show_all') }}">Show All</a></li>
+                    <li><a href="{{ (request()->page == 'show_all') ? route('products.index') :$products->url('show_all') }}">{{ (request()->page == 'show_all') ? 'Show Less' : 'Show All' }}</a></li>
                 </ul>
             </div>
             

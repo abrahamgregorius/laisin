@@ -176,24 +176,26 @@ a:hover {
 
 @keyframes slide-left {
     from {
-      margin-left: 100%;
+        margin-left: 100%;
     }
     to {
-      margin-left: 0%;
+        margin-left: 0%;
     }
-  }
-
+}
 
 .hidden {
     display: none;
 }
 
-a , a:link , a:visited {
+a,
+a:link,
+a:visited {
     color: #1f2630;
     text-decoration: none;
 }
 
-a:link:hover , a:visited:hover {
+a:link:hover,
+a:visited:hover {
     color: var(--laisin);
     /* text-decoration: underline; */
 }
