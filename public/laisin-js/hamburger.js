@@ -1,23 +1,12 @@
-let hamburger = document.querySelector('.hamburger')
-let mobileNav = document.querySelector('.mobile-nav')
-let hamburgerToggleNotOpen = document.querySelector('.not-open')
-let hamburgerToggleOpen = document.querySelector('.open')
-let closeMobileNav = document.querySelector('.close-mobile-nav')
+const hamburger = document.querySelector('.hamburger');
+const mobileNav = document.querySelector('.mobile-nav');
+const hamburgerToggle = document.querySelectorAll('.hamburger-toggle');
+const closeMobileNav = document.querySelector('.close-mobile-nav');
 
-hamburger.addEventListener('click',function(){
-    mobileNav.classList.toggle('slide')
-    if(mobileNav.classList.contains('slide')){
-        hamburgerToggleNotOpen.classList.add('hide')
-        hamburgerToggleOpen.classList.remove('hide')
-    } else {
-        hamburgerToggleNotOpen.classList.remove('hide')
-        hamburgerToggleOpen.classList.add('hide')
-    }
-})
+const toggleMobileNav = () => {
+    mobileNav.classList.toggle('slide');
+    hamburgerToggle.forEach(element => element.classList.toggle('hide'));
+};
 
-closeMobileNav.addEventListener('click',function(){
-   mobileNav.classList.remove('slide')
-   hamburgerToggleNotOpen.classList.remove('hide')
-   hamburgerToggleOpen.classList.add('hide')
-});
-
+hamburger.addEventListener('click', toggleMobileNav);
+closeMobileNav.addEventListener('click', toggleMobileNav);

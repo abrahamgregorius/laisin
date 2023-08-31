@@ -105,7 +105,9 @@
                                             Car Year :
                                         </td>
                                         <td>
-                                            {{ $product->car_year }}
+                                            <a href="{{ route('year.detail',$product->car_year)}}">
+                                                {{ $product->car_year }}
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>

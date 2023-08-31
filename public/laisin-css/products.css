@@ -276,6 +276,7 @@ a:visited:hover {
 
 .pagination {
     display: flex;
+    margin-top: 10px;
     align-self: flex-end;
     justify-content: flex-end;
 }
