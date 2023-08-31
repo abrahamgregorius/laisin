@@ -18,7 +18,8 @@ class Product extends Model
         'description',
         'category_id',
         'brand_id',
-        'car_year'
+        'car_year',
+        'thumbnail'
     ];
 
     protected $guarded = [

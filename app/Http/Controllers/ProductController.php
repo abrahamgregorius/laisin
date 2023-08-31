@@ -46,28 +46,21 @@ class ProductController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string',
-            'part_number' => 'required|unique:products',
-            'description' => 'required|string',
-            'brand_id' => 'required|exists:brands,id',
-            'category_id' => 'required|exists:categories,id',
-            'car_year' => 'nullable|integer',
-            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+    {    
+        $slug = str()->slug($request->product_name);
+        $request->file('thumbnail')->move("images/$slug/", "image.png");
 
-    
-        if ($request->hasFile('thumbnail')) {
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailPath = time() . '_' . $thumbnail->getClientOriginalName();
-            $thumbnail->storeAs('thumbnails', $thumbnailPath); // Store in storage/app/thumbnails
-            $validatedData['thumbnail'] = $thumbnailPath;
-        }
+        Product::create([
+            'name' => $request->product_name,
+            'part_number' => $request->part_number,
+            'description' => $request->description,
+            'brand_id' => $request->brand_id,
+            'category_id' => $request->category_id,
+            'car_year' => $request->car_year,
+            'thumbnail' => "/images/$slug/image.png",
+        ]);
       
-        Product::create($validatedData);
-    
-        return redirect(route('admin.index'))->with('success', 'Product created successfully.');        
+        return redirect('/admin/products');
     }
 
     /**
@@ -85,9 +78,10 @@ class ProductController extends Controller
     public function edit(Product $product, string $id)
     {
         $brands = Brand::all();
+        $categories = Category::all();
         $data = Product::findOrFail($id);
         // dd($data);
-        return view('admin.products.update', compact('data', 'brands'));
+        return view('admin.products.update', compact('data', 'brands', 'categories'));
     }
 
     /**
@@ -95,12 +89,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product, string $id)
     {
+
+        $slug = str()->slug($request->product_name);
+        if($request->hasFile('thumbnail')){
+            $request->file('thumbnail')->move("images/$slug/", "image.png");
+        }
+
         $data = Product::findOrFail($id);        
         $data->name = $request->name;
         $data->part_number = $request->part_number;
         $data->description = $request->description;
+        $data->category_id = $request->category_id;
         $data->brand_id = $request->brand_id;
         $data->car_year = $request->car_year;
+        $data->thumbnail = "images/$slug/image.png";
         $data->save();
 
         return redirect('/admin/products');

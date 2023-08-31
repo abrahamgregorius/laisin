@@ -25,6 +25,16 @@
                     <label for="description" class="form-label">Description</label>
                     <textarea type="text" name="description" class="form-control" placeholder="Type Product Description Here">{{ $data->description }}</textarea>
                     
+                    {{-- Select Category --}}
+                    <div class="mb-2"></div>
+                    <label for="brand_id" class="form-label">Category</label>
+                    <select class="form-control" name="category_id">
+                        <option selected>-- SELECT CATEGORY --</option>
+                        @foreach ($categories as $category)
+                        <option @if($category->id === $data->category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+
                     {{-- Brand ID --}}
                     <div class="mb-2"></div>
                     <label for="brand_id" class="form-label">Brand ID</label>
@@ -39,8 +49,13 @@
                     <div class="mb-2"></div>
                     <label for="year">Car Year</label>
                     <input type="text" name="car_year" value="{{ $data->car_year }}" class="form-control">
-                    <div class="mb-2">
-                    </div>
+                    
+                    {{-- Thumbnail upload --}}
+                    <div class="mb-2"></div>
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="file" value="{{ $data->thumbnail }}" name="thumbnail" class="form-control">
+                    
+                    <div class="mb-2"></div>
                     <button type="submit" class="btn btn-primary float-right mt-4">Submit</button>
                 </form>
             </div>
