@@ -37,8 +37,7 @@
                             <h2>{{ $product->name }}</h2>
                         </div>
                         <div class="product-images">
-                            <img loading="lazy" src="https://autoimage.templines.info/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-750x420.jpg"
-                                alt="img">
+                            <img src="{{ url("/images/$product->slug/image.png") }}" alt="img">
                         </div>
                         <div class="laisin-show-product-menu">
                             <div class="menu-btn menu-active">
@@ -49,15 +48,7 @@
                             </div>
                         </div>
                         <div class="product-description">
-                        This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy
-                        confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many
-                        years and always provide customers with a great value!
-                        Sit amet consectetura dipisicing elit dui sed eiusmod ciltempor incididunt uet labore uset
-                        dolore magna aliqua minim veniam quisnostrud exercitation. Slamco em laborisa aliquip ex ea
-                        comdo consequat uis sed auted irure rehenderit voluptate velit esse cillum doloreu fugiat nulla
-                        sed pariatura ipsum dolor am consecteu adipis elit sed do eiusmod tempora incididunt. Lorem
-                        ipsum dolor sitamet, consectetur adipisicing elit sedo eius tempor incididunt ut labore et
-                        dolore magna aliqua.
+                        {{ $product->description }}
                         </div>
                         <div class="product-spesification hidden">
                             <table class="table laisin-products-table">
