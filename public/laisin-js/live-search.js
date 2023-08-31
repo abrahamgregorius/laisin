@@ -10,6 +10,18 @@ class LiveSearch {
     }
 
     setupEventListeners() {
+        this.searchInput.on('click', (e) => {
+            const parameterToAdd = 'page=show_all';
+            if (window.location.search === '?' + parameterToAdd) {
+                e.preventDefault();
+            } else {
+                const newUrl = window.location.origin + window.location.pathname + '?' + parameterToAdd;
+                window.location.href = newUrl;
+            }
+        });
+
+
+
         this.searchInput.on('keyup', () => {
             const valueSearch = this.searchInput.val();
             if (valueSearch.length >= 0) {

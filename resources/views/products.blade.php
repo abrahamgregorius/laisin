@@ -72,7 +72,7 @@
                 </thead>
                 <tbody id="product-homepage-data">
                     @foreach($products as $product)
-                        <tr class="table-item">
+                        <tr class="table-item" >
                             <td><a href="{{ route('products.detail',$product->slug) }}">{{ $product->name }}</a></td>
                             <td>{{ $product->part_number }}</td>
                             <td><a href="/products/category/{{ $product->category->slug }}">{{ $product->category->name }}</a></td>
@@ -86,29 +86,34 @@
             </div>
             <div class="pagination">
                 <ul>
-                    <!-- Previous Page Link -->
                     @if ($products->currentPage() > 1)
-                        <li><a href="{{ $products->previousPageUrl() }}">Previous</a></li>
+                        <li class="prev"><a href="{{ $products->previousPageUrl() }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                          </svg> Previous</a></li>
                     @endif
             
-                    <!-- Pagination Links -->
                     @if(request()->page != 'show_all')
-                    @for ($i = 1; $i <= $products->lastPage(); $i++)
+                    @php
+                        $startPage = max($products->currentPage() - 2, 1);
+                        $endPage = min($startPage + 4, $products->lastPage());
+                    @endphp
+                    @for ($i = $startPage; $i <= $endPage; $i++)
                         <li class="{{ ($i == $products->currentPage()) ? 'active' : '' }}">
                             <a href="{{ $products->url($i) }}">{{ $i }}</a>
                         </li>
                     @endfor
                     @endif
             
-                    <!-- Next Page Link -->
                     @if ($products->currentPage() < $products->lastPage())
-                        <li><a href="{{ $products->nextPageUrl() }}">Next</a></li>
+                        <li class="next"><a href="{{ $products->nextPageUrl() }}">Next <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg></a></li>
                     @endif
-            
-                    <!-- Show All Option -->
-                    <li><a href="{{ (request()->page == 'show_all') ? route('products.index') :$products->url('show_all') }}">{{ (request()->page == 'show_all') ? 'Show Less' : 'Show All' }}</a></li>
+        
+                    <li class="show_all"><a href="{{ (request()->page == 'show_all' ) ? route('products.index') :$products->url('show_all') }}">{{ (request()->page == 'show_all') ? 'Show Less' : 'Show All' }}</a></li>
                 </ul>
             </div>
+            
             
     </div>
 </section>

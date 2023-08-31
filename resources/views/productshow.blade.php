@@ -37,7 +37,11 @@
                             <h2>{{ $product->name }}</h2>
                         </div>
                         <div class="product-images">
-                            <img src="{{ url("/images/$product->slug/image.png") }}" alt="img">
+                            @if(isset($product->thumbnail) && $product->thumbnail != null)
+                            <img src="{{ $product->thumbnail }}" alt="img">
+                            @else 
+                             <img src="{{ asset('assets/no-image.webp')}}" alt="img" style="width: 100%; height:100% ">
+                            @endif
                         </div>
                         <div class="laisin-show-product-menu">
                             <div class="menu-btn menu-active">
@@ -62,7 +66,9 @@
                                             Brand Name :
                                         </td>
                                         <td>
-                                            {{ $product->brand->brand_name }}
+                                            <a href={{ route('brands.show',$product->brand->slug)}}>
+                                                {{ $product->brand->brand_name }}
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -73,7 +79,9 @@
                                             Category :
                                         </td>
                                         <td>
-                                            {{ $product->category->name }}
+                                            <a href={{ route('categories.show',$product->category->slug) }}>
+                                                {{ $product->category->name }}
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -121,7 +129,11 @@
                                 <p>{{ $relative->category->name }}</p>
                             </div>
                             <div class="product-relative-img">
-                                <img src="https://autoimage.templines.info/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-750x420.jpg" alt="img" loading="lazy">
+                                @if(isset($relative->thumbnail) && $relative->thumbnail != null)
+                                <img src="{{ $relative->thumbnail }}" alt="img" loading="lazy">
+                                @else 
+                                 <img src="{{ asset('assets/no-image.webp')}}" alt="img" style="width: 100%; height:100%" loading="lazy">
+                                @endif
                             </div>
                         </a>
                         

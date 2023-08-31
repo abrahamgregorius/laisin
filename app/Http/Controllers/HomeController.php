@@ -31,7 +31,7 @@ class HomeController extends Controller
     }
 
     public function index_products(Request $request) {
-        $perPage = request()->page == "show_all" ? 15 : 10;
+        $perPage = request()->page == "show_all" ? 1000 : 25;
         $products = Product::paginate($perPage);
         return view('products', compact('products'));
     } 
