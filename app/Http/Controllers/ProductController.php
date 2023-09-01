@@ -51,9 +51,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {    
         $slug = str()->slug($request->product_name);
-        $request->file('thumbnail')->move("images/$slug/", "image.png");
-
-        $validator = Validator::make([
+        
+        $validator = Validator::make($request->all(), [
             'name' => ['required'],
             'part_number' => ['required', 'unique:products,part_number'],
             'description' => ['nullable'],
@@ -67,6 +66,9 @@ class ProductController extends Controller
             return redirect('/admin/products/create')->with('message', $validator->errors());
         }
 
+        if($request->hasFile('thumbnail')){
+            $request->file('thumbnail')->move("images/$slug/", "image.png");
+        }
         Product::create([
             'name' => $request->product_name,
             'part_number' => $request->part_number,
