@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use File;
+use Illuminate\Support\Facades\File as FacadesFile;
 
 class ProductController extends Controller
 {
@@ -87,22 +89,25 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product, string $id)
+    public function update(Request $request, string $id)
     {
+        
+        $data = Product::findOrFail($id);
+        $slug = $data->slug;
 
-        $slug = str()->slug($request->product_name);
+
         if($request->hasFile('thumbnail')){
+            FacadesFile::delete(public_path("images/$slug/image.png"));
             $request->file('thumbnail')->move("images/$slug/", "image.png");
         }
 
-        $data = Product::findOrFail($id);        
         $data->name = $request->name;
         $data->part_number = $request->part_number;
         $data->description = $request->description;
         $data->category_id = $request->category_id;
         $data->brand_id = $request->brand_id;
         $data->car_year = $request->car_year;
-        $data->thumbnail = "images/$slug/image.png";
+        // $data->thumbnail = "images/$slug/image1.png";
         $data->save();
 
         return redirect('/admin/products');

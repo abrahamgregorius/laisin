@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 {{-- ganti 2 jadi id --}}
-                <form action="{{ route('edit.product', $data->id) }}" method="POST">
+                <form action="{{ route('edit.product', $data->id) }}" method="POST" enctype="multipart/form-data" >
                     @csrf
                     {{-- Name --}}
                     <label for="product_name" class="form-label">Product Name</label>
@@ -53,7 +53,7 @@
                     {{-- Thumbnail upload --}}
                     <div class="mb-2"></div>
                     <label for="thumbnail">Thumbnail</label>
-                    <input type="file" value="{{ $data->thumbnail }}" name="thumbnail" class="form-control">
+                    <input type="file" name="thumbnail" value="{{ $data->thumbnail }}" class="form-control">
                     
                     <div class="mb-2"></div>
                     <button type="submit" class="btn btn-primary float-right mt-4">Submit</button>

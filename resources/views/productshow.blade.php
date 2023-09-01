@@ -37,8 +37,8 @@
                             <h2>{{ $product->name }}</h2>
                         </div>
                         <div class="product-images">
-                            @if(isset($product->thumbnail) && $product->thumbnail != null)
-                            <img src="{{ $product->thumbnail }}" alt="img">
+                            @if($product->thumbnail != "")
+                            <img src="{{ asset("images/$product->slug/image.png") }}" alt="img">
                             @else 
                              <img src="{{ asset('assets/no-image.webp')}}" alt="img" style="width: 100%; height:100% ">
                             @endif
