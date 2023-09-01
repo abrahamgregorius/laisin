@@ -8,6 +8,9 @@ use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use File;
+use Illuminate\Support\Facades\File as FacadesFile;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -49,8 +52,24 @@ class ProductController extends Controller
     public function store(Request $request)
     {    
         $slug = str()->slug($request->product_name);
-        $request->file('thumbnail')->move("images/$slug/", "image.png");
+        
+        $validator = Validator::make($request->all(), [
+            'name' => ['required'],
+            'part_number' => ['required', 'unique:products,part_number'],
+            'description' => ['nullable'],
+            'brand_id' => ['required'],
+            'category_id' => ['required'],
+            'car_year' => ['nullable'],
+            'thumbnail' => ['nullable'],
+        ]);
 
+        if($validator->fails()){
+            return redirect('/admin/products/create')->with('message', $validator->errors());
+        }
+
+        if($request->hasFile('thumbnail')){
+            $request->file('thumbnail')->move("images/$slug/", "image.png");
+        }
         Product::create([
             'name' => $request->product_name,
             'part_number' => $request->part_number,
@@ -89,22 +108,25 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product, string $id)
+    public function update(Request $request, string $id)
     {
+        
+        $data = Product::findOrFail($id);
+        $slug = $data->slug;
 
-        $slug = str()->slug($request->product_name);
+
         if($request->hasFile('thumbnail')){
+            FacadesFile::delete(public_path("images/$slug/image.png"));
             $request->file('thumbnail')->move("images/$slug/", "image.png");
         }
 
-        $data = Product::findOrFail($id);        
         $data->name = $request->name;
         $data->part_number = $request->part_number;
         $data->description = $request->description;
         $data->category_id = $request->category_id;
         $data->brand_id = $request->brand_id;
         $data->car_year = $request->car_year;
-        $data->thumbnail = "images/$slug/image.png";
+        // $data->thumbnail = "images/$slug/image1.png";
         $data->save();
 
         return redirect('/admin/products');
