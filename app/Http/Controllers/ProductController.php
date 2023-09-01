@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use File;
 use Illuminate\Support\Facades\File as FacadesFile;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -51,6 +52,20 @@ class ProductController extends Controller
     {    
         $slug = str()->slug($request->product_name);
         $request->file('thumbnail')->move("images/$slug/", "image.png");
+
+        $validator = Validator::make([
+            'name' => ['required'],
+            'part_number' => ['required', 'unique:products,part_number'],
+            'description' => ['nullable'],
+            'brand_id' => ['required'],
+            'category_id' => ['required'],
+            'car_year' => ['nullable'],
+            'thumbnail' => ['nullable'],
+        ]);
+
+        if($validator->fails()){
+            return redirect('/admin/products/create')->with('message', $validator->errors());
+        }
 
         Product::create([
             'name' => $request->product_name,
