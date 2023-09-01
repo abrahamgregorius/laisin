@@ -52,7 +52,7 @@ class ProductController extends Controller
         $slug = str()->slug($request->product_name);
         
         $validator = Validator::make($request->all(), [
-            'name' => ['required'],
+            'product_name' => ['required'],
             'part_number' => ['required', 'unique:products,part_number'],
             'description' => ['nullable'],
             'brand_id' => ['required'],

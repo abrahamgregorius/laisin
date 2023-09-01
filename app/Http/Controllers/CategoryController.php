@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Product;
 use Illuminate\Support\Facades\Crypt;
 
 class CategoryController extends Controller
@@ -55,7 +56,8 @@ class CategoryController extends Controller
     public function show(Category $category, string $slug)
     {
         $data = Category::where('slug', $slug)->first();
-        return view('admin.categories.show', compact('data'));
+        $productContain = Product::where('category_id',$data->id)->get();
+        return view('admin.categories.show', compact('data','productContain'));
     }
 
     /**
