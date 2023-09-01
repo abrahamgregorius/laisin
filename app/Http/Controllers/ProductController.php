@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
-use File;
+use RealRashid\SweetAlert\Facades\Alert as Alert;
 use Illuminate\Support\Facades\File as FacadesFile;
 use Illuminate\Support\Facades\Validator;
 
@@ -63,8 +61,11 @@ class ProductController extends Controller
             'thumbnail' => ['nullable'],
         ]);
 
-        if($validator->fails()){
-            return redirect('/admin/products/create')->with('message', $validator->errors());
+        
+        if ($validator->fails()) {
+            $messages = $validator->errors()->all();
+            Alert::error('Field incorrect', implode( " ", $messages));
+            return redirect('/admin/products/create');
         }
 
         if($request->hasFile('thumbnail')){
