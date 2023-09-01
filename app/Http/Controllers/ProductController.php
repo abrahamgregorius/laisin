@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
@@ -60,6 +61,7 @@ class ProductController extends Controller
             'thumbnail' => "/images/$slug/image.png",
         ]);
       
+        Alert::success('Success', 'Success Inserting Products');
         return redirect('/admin/products');
     }
 

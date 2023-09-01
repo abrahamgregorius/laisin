@@ -8,6 +8,7 @@
    <div class="col-12">
     <div class="card">
         <div class="card-body">
+            <img src="{{ url($data->thumbnail)}}" alt="">
             <div class="product product-name">
                 <p>Product Name</p>
                 <h4>{{ $data->name }}</h4>

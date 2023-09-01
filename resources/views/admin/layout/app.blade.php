@@ -9,9 +9,10 @@
     <meta name="_token" content="{!! csrf_token() !!}" />
     <link rel="stylesheet" href="{{ asset('laisin-css/admin.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
-</head>
+  </head>
 
 <body>
+  @include('sweetalert::alert')
   
 <!-- Main Sidebar Container -->
 <div class="wrapper">
