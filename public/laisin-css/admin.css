@@ -1,3 +1,9 @@
+:root {
+    --main: #1f2630;
+    --secondary: #b3c2cf;
+    --laisin: #f8470a;
+}
+
 #laisin img {
     height: 30px;
 }
@@ -10,4 +16,9 @@
 .product {
     border-bottom: 1px solid #ccc;
     padding: 10px;
+}
+
+.swal2-styled {
+    background-color: var(--laisin) !important;
+    border: 2px solid #ff7c51 !important;
 }

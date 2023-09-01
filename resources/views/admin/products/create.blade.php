@@ -5,7 +5,7 @@
     <a href="{{ route('index.products') }}" class="btn btn-primary">Back</a>
 </div>
 <div class="row">
-    <div class="col-12">
+    <div class="col-12" style="height: 100%; margin-bottom: 20rem;">
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('create.product') }}" enctype="multipart/form-data" method="POST">
@@ -45,7 +45,7 @@
                     {{-- Car year --}}
                     <div class="mb-2"></div>
                     <label for="year">Car Year</label>
-                    <input type="number" name="car_year" class="form-control">
+                    <input id="yearpicker" type="number" name="car_year" class="form-control">
                     
                     
                     {{-- Thumbnail upload --}}

@@ -31,7 +31,7 @@ class ProductController extends Controller
                 return response()->json($brandToSearch);
                 
             }
-            return json_encode("Tidak Ada Data Yang Masuk Bjir");
+            return json_encode("There's Not Data To Show!");
         }
     }
 

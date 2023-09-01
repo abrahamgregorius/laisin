@@ -9,6 +9,7 @@
     <meta name="_token" content="{!! csrf_token() !!}" />
     <link rel="stylesheet" href="{{ asset('laisin-css/admin.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/year-picker/yearpicker.css')}}">
   </head>
 
 <body>
@@ -127,9 +128,10 @@
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://kit.fontawesome.com/1426d21c51.js" crossorigin="anonymous"></script>
+<script src="{{ asset('assets/year-picker/yearpicker.js')}}"></script>
 <script src="{{ asset('laisin-js/laisin-chart.js') }}"></script>
 <script src="{{ asset('laisin-js/live-search.js')}}"></script>
-
+<script src="{{ asset('laisin-js/laisin-admin.js')}}"></script>
 </body>
 
 </html>
