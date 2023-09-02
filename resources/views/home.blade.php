@@ -235,7 +235,7 @@
                         </div>
                         <div class="testi-description">
                             <h5>Faris Sanjaya</h5>
-                            <p>Thrilled with Laisindo! Their quality parts have kept my vehicle running smoothly for years. Trustworthy choice!
+                            <p>Thrilled with Laisindo Anugerah Jaya Abadi! Their quality parts have kept my vehicle running smoothly for years. Trustworthy choice!
                             </p>
                         </div>
                     </div>  
