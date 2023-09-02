@@ -74,6 +74,7 @@
     <script src="{{ asset('laisin-js/live-search.js') }}"></script>
     <script src={{ asset('laisin-js/hamburger.js') }}></script>
     <script src="{{ asset('laisin-js/laisin-product.js') }}"></script>
+    <script src="{{ asset('laisin-js/contact.js') }}"></script>
     <script src="{{ asset('bootstrap.min.js') }}"></script>
     @include('layout.components.footer') 
 </body>
