@@ -256,9 +256,9 @@
  
  .descriptions {
      display: flex;
-     padding: 0px 50px;
+     padding: 0px 30px;
      justify-content: center;
-     text-align: center;
+     text-align: start;
  }
  
  .product-card {
@@ -273,17 +273,13 @@
      transition: ease-in-out .2s;
  }
  
- .product-card:hover .img-product {
-     /* scale: 110%; */
- }
- 
  .product-card:hover {
      scale: 105%;
  }
  
  .description-details {
      display: flex;
-     gap: 10px;
+     gap: 15px;
  }
  
  .description-title {
@@ -350,6 +346,10 @@
  
  .products-more:hover .button::after {
      width: 83%;
+ }
+ 
+ .product-description .title h5 {
+     font-weight: 700;
  }
  
  .laisin-aboutus {
@@ -663,6 +663,20 @@
      font-size: 48px;
  }
  
+ .share-this-product {
+     margin-top: 20px;
+ }
+ 
+ .share-this-product p {
+     font-weight: 700;
+ }
+ 
+ .share-to {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+ 
  @media only screen and (max-width:600px) {
      .laisin-menu {
          display: none;
@@ -677,12 +691,12 @@
          height: 30px;
      }
      .hero-text h1 {
-         font-size: 38px;
+         font-size: 36px;
          text-align: center;
          font-weight: 700;
      }
      .hero-text p {
-         width: 70%;
+         width: 90%;
          font-size: 18px;
          text-align: center;
      }

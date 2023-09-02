@@ -35,3 +35,7 @@
     background-color: var(--main);
     padding-bottom: 20px;
 }
+
+.invisible {
+    display: none;
+}

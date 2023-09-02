@@ -33,14 +33,20 @@ class FormController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    { 
+        $request->validate([      
+            'name'=> 'required',
+            'email'=> 'required|email',
+            'password'  => 'required',
+          ]);
+
         Form::create([
             'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message
         ]);
 
-        return redirect('/contacts');
+        return redirect('/contacts')->with('message','We greatly appreciate you taking the time to get in touch with us. Your message has been received, and we will review it as soon as possible.');
     }
 
     /**
