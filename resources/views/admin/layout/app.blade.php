@@ -132,6 +132,7 @@
 <script src="{{ asset('laisin-js/laisin-chart.js') }}"></script>
 <script src="{{ asset('laisin-js/live-search.js')}}"></script>
 <script src="{{ asset('laisin-js/laisin-admin.js')}}"></script>
+<script src="{{ asset('laisin-js/laisin-uploadfile.js')}}"></script>
 </body>
 
 </html>

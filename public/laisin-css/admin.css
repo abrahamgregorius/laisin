@@ -34,3 +34,72 @@
     background-color: var(--laisin) !important;
     border: 2px solid #ff7c51 !important;
 }
+
+.drag-and-drop {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+}
+
+.drag-icons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag-icons span {
+    opacity: 40%;
+    text-align: center;
+    font-weight: 600
+}
+
+.drag-icons p {
+    color: #f8470a;
+}
+
+.drag-and-drop input {
+    opacity: 0%;
+    height: 150px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dragenter {
+    border: 2px solid var(--laisin);
+}
+
+.preview {
+    width: 170px;
+    position: absolute;
+    height: 130px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-img {
+    display: none;
+    width: 0px !important;
+    height: 0px !important;
+    top: 0px;
+}
+
+.preview img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
