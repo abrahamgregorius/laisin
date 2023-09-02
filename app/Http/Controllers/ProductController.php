@@ -102,7 +102,6 @@ class ProductController extends Controller
         $brands = Brand::all();
         $categories = Category::all();
         $data = Product::findOrFail($id);
-        // dd($data);
         return view('admin.products.update', compact('data', 'brands', 'categories'));
     }
 
@@ -127,7 +126,6 @@ class ProductController extends Controller
         $data->category_id = $request->category_id;
         $data->brand_id = $request->brand_id;
         $data->car_year = $request->car_year;
-        // $data->thumbnail = "images/$slug/image1.png";
         $data->save();
 
         return redirect('/admin/products');

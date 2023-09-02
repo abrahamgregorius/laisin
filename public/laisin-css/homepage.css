@@ -256,6 +256,7 @@
  
  .descriptions {
      display: flex;
+     padding: 0px 50px;
      justify-content: center;
      text-align: center;
  }
@@ -269,16 +270,15 @@
      cursor: pointer;
      border-radius: 5px;
      background-color: #f5f5f5;
+     transition: ease-in-out .2s;
  }
  
  .product-card:hover .img-product {
-     scale: 110%;
-     transition: ease-in-out .7s;
+     /* scale: 110%; */
  }
  
  .product-card:hover {
      scale: 105%;
-     transition: ease-in-out .7s;
  }
  
  .description-details {
@@ -452,11 +452,11 @@
      cursor: pointer;
      margin: 20px 0px;
      border-radius: 10px;
+     transition: scale .5s;
  }
  
  .testi-card:hover {
      scale: 105%;
-     transition: .8s;
  }
  
  .testi-wrappers {
