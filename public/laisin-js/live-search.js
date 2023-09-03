@@ -34,7 +34,6 @@ class LiveSearch {
 
     performSearch(valueSearch) {
         this.resultsContainer.html('<div class="loading">Loading...</div>');
-        console.log(this.currentSlug)
         $.ajax({
             type: "POST",
             url: window.location.pathname,
@@ -58,7 +57,6 @@ class LiveSearch {
         this.clearResults();
         if (results.length > 0) {
             results.forEach((result) => {
-                console.log(result)
                 const resultElement = this.createResultElement(result);
                 this.resultsContainer.append(resultElement);
             });

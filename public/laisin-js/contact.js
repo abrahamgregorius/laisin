@@ -1,26 +1,9 @@
 $(document).ready(function() {
-    function checkInputs() {
-        const name = $("#contact-name").val();
-        const email = $("#contact-email").val();
-        const message = $("#contact-message").val();
-
-        if (name === "" || email === "" || message === "") {
-            $("#contact-submit").prop("disabled", true);
-        } else {
-            $("#contact-submit").prop("disabled", false);
-        }
+    function t() {
+        var t = $("#contact-name").val(),
+            c = $("#contact-email").val(),
+            a = $("#contact-message").val();
+        "" === t || "" === c || "" === a ? $("#contact-submit").prop("disabled", !0) : $("#contact-submit").prop("disabled", !1)
     }
-
-
-    checkInputs();
-
-
-    $("#contact-name, #contact-email, #contact-message").on("input", checkInputs);
-
-    $("#contact-form").submit(function(event) {
-
-        if ($("#contact-submit").prop("disabled")) {
-            event.preventDefault();
-        }
-    });
+    t(), $("#contact-name, #contact-email, #contact-message").on("input", t), $("#contact-form").submit(function(t) { $("#contact-submit").prop("disabled") && t.preventDefault() })
 });
