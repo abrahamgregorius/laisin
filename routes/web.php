@@ -65,6 +65,7 @@ Route::prefix('/admin')->group(function(){
                 Route::post('/{id}/edit','update')->name('update.product');
 
                 Route::delete('{id}/delete','destroy')->name('delete.product');
+                Route::get('{id}/delete','destroy')->name('delete.product.livesearch');
             });
         });
     
@@ -113,6 +114,7 @@ Route::prefix('/admin')->group(function(){
 
         Route::prefix('/forms')->group(function() {
             Route::get('/', [FormController::class, 'admin_index'])->name('index.forms');
+            Route::delete('{id}/delete',[FormController::class,'delete_form'])->name('delete.form');
         });
 
     });

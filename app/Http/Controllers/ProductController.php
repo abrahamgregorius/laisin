@@ -15,9 +15,10 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
+        $perPage = request()->page == "show_all" ? 1000 : 25;
+        $products = Product::paginate($perPage);
         $categories = Category::all();
 
         return view('admin.products.index', compact('products'));
@@ -126,6 +127,7 @@ class ProductController extends Controller
         $data->category_id = $request->category_id;
         $data->brand_id = $request->brand_id;
         $data->car_year = $request->car_year;
+        $data->thumbnail = "/images/$slug/image.png";
         $data->save();
 
         return redirect('/admin/products');
@@ -138,6 +140,6 @@ class ProductController extends Controller
     {
         $product_data = Product::findOrFail($id);
         $product_data->delete();
-        return redirect('/admin/products');
+        return redirect()->back();
     }
 }

@@ -11,10 +11,10 @@ class BrandController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {   
-        
-        $brands = Brand::all();
+        $perPage = request()->page == "show_all" ? 1000 : 25;
+        $brands = Brand::paginate($perPage);
         return view('admin.brands.index', compact("brands"));
     }
 

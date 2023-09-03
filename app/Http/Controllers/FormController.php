@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FormController extends Controller
 {
@@ -17,9 +18,16 @@ class FormController extends Controller
 
     public function admin_index(Form $form) {
         $forms = Form::get();
-
+       
         return view('admin.forms.index', compact('forms'));
     }
+   
+    public function delete_form(Request $request){
+         $forms = Form::where('id', $request->id)->delete();
+        
+       return redirect()->back();
+    }
+
 
     /**
      * Show the form for creating a new resource.
