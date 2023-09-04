@@ -9,8 +9,8 @@
     {{-- <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/products.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/contact.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/laisin-favicon.png') }}" type="image/x-icon"> --}}
+    <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}"> --}}
+    <link rel="shortcut icon" href="{{ asset('assets/laisin-favicon.png') }}" type="image/x-icon"> 
 
     @vite([
         'resources/css/app.css',
@@ -75,7 +75,19 @@
         @yield('content')
     </main>
     
-    @vite(['resources/js/app.js'])
+    @vite([
+        'resources/js/laisin-js/confirmdelete.js',
+        'resources/js/laisin-js/contact.js',
+        'resources/js/laisin-js/hamburger.js',
+        'resources/js/laisin-js/laisin-admin.js',
+        'resources/js/laisin-js/laisin-chart.js',
+        'resources/js/laisin-js/laisin-product.js',
+        'resources/js/laisin-js/laisin-uploadfile.js',
+        'resources/js/laisin-js/live-search.js',
+        'resources/js/laisin-js/sweetalert.all.js',
+        'resources/js/bootstrap.js',
+        ])
+
     @include('layout.components.footer') 
 </body>
 </html>
