@@ -74,12 +74,8 @@
     <main>
         @yield('content')
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="{{ asset('laisin-js/live-search.js') }}"></script>
-    <script src={{ asset('laisin-js/hamburger.js') }}></script>
-    <script src="{{ asset('laisin-js/laisin-product.js') }}"></script>
-    <script src="{{ asset('laisin-js/contact.js') }}"></script>
-    <script src="{{ asset('bootstrap.min.js') }}"></script>
+    
+    @vite(['resources/js/app.js'])
     @include('layout.components.footer') 
 </body>
 </html>

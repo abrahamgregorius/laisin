@@ -4,7 +4,7 @@
 
 {{-- No shadow hero --}}
 <div class="laisin-hero">
-    <img src="{{ asset('assets/image.webp') }}" alt="hero" loading="lazy">
+    <img src="{{ asset('assets/image.webp') }}" alt="hero">
     <div class="hero-text">
         <h1>Laisindo Autoparts</h1>
         <p>Welcome to Laisindo Autoparts – your trusted source for premium automotive solutions. Find genuine parts and expert advice to keep your vehicles running smoothly. Elevate your driving experience with us.</p>
