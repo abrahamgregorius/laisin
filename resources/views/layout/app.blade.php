@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laisindo Autoparts</title>
     <meta name="_token" content="{!! csrf_token() !!}" />
-    <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/products.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/laisin-favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/laisin-favicon.png') }}" type="image/x-icon"> --}}
+
+    @vite([
+        'resources/css/app.css',
+    ])
 </head>
 <body>
     {{-- Navbar --}}
