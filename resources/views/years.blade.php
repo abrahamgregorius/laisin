@@ -17,7 +17,7 @@
                   </svg>
             </li>
             <li>
-                <a href="" style="color:#f8470a">All Years</a>
+                <a href="" style="color:#f8470a">All Cars</a>
             </li>
         </ul>
     </div>
@@ -25,7 +25,7 @@
 
 <section class="laisin-years-page">
     <div class="container mx-auto mt-4">
-        <h4>Years</h4>
+        <h4>Cars</h4>
         <div class="laisin-products-options">
             <a href="{{ route('categories.index') }}" class="options-category">
                 <div class="wrappers-options-category">
@@ -63,7 +63,7 @@
         </div>
         <div class="laisin-table">
             <div  class="table-title">
-                <p>All Years</p>
+                <p>All Cars</p>
             </div>
             <table class="table">
                 <thead class="text-white">
