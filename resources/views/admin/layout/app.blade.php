@@ -129,9 +129,18 @@
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://kit.fontawesome.com/1426d21c51.js" crossorigin="anonymous"></script>
+
 @vite([
-  'resources/js/admin.js'
+  'public/assets/year-picker/yearpicker.js',
+  'resources/js/laisin-js/sweetalert.all.js',
+  'resources/js/laisin-js/confirmdelete.js',
+  'resources/js/laisin-js/laisin-chart.js',
+  'resources/js/laisin-js/live-search.js',
+  'resources/js/laisin-js/laisin-admin.js',
+  'resources/js/laisin-js/laisin-uploadfile.js',
+
 ])
+
 
 {{-- <script src="{{ asset('assets/year-picker/yearpicker.js')}}"></script>
 <script src="{{ asset('laisin-js/sweetalert.all.js') }}"></script>
