@@ -38,6 +38,11 @@
     "isEntry": true,
     "src": "resources/js/laisin-js/hamburger.js"
   },
+  "resources/js/laisin-js/jquery.js": {
+    "file": "assets/jquery-458386b8.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/jquery.js"
+  },
   "resources/js/laisin-js/laisin-admin.js": {
     "file": "assets/laisin-admin-bea6212c.js",
     "isEntry": true,
