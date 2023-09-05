@@ -2,9 +2,6 @@
   "_axios-e636b08d.js": {
     "file": "assets/axios-e636b08d.js"
   },
-  "_laisin-admin-dacb7c35.js": {
-    "file": "assets/laisin-admin-dacb7c35.js"
-  },
   "public/assets/year-picker/yearpicker.js": {
     "file": "assets/yearpicker-9771f61c.js",
     "isEntry": true,
@@ -15,18 +12,9 @@
     "isEntry": true,
     "src": "resources/css/app.css"
   },
-  "resources/js/admin.js": {
-    "file": "assets/admin-2ffb88af.js",
-    "imports": [
-      "_laisin-admin-dacb7c35.js"
-    ],
-    "isEntry": true,
-    "src": "resources/js/admin.js"
-  },
   "resources/js/app.js": {
-    "file": "assets/app-1ed5389a.js",
+    "file": "assets/app-0d136b63.js",
     "imports": [
-      "_laisin-admin-dacb7c35.js",
       "_axios-e636b08d.js"
     ],
     "isEntry": true,

@@ -9,7 +9,6 @@ export default defineConfig({
                 'resources/js/laisin-js/sweetalert.all.js',
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/admin.js',
                 'resources/sass/app.scss',
                 'resources/js/laisin-js/live-search.js',
                 'resources/js/laisin-js/hamburger.js',

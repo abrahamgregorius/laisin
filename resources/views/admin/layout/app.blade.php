@@ -138,7 +138,6 @@
   'resources/js/laisin-js/live-search.js',
   'resources/js/laisin-js/laisin-admin.js',
   'resources/js/laisin-js/laisin-uploadfile.js',
-
 ])
 
 
