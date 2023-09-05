@@ -179,7 +179,8 @@
                         </div>
                         <div class="testi-description">
                             <h5>Faris Sanjaya</h5>
-                            <p>Thrilled with Laisindo Anugerah Jaya Abadi! Their quality parts have kept my vehicle running smoothly for years. Trustworthy choice!
+                            <p>
+                                Laisindo Anugerah Jaya Abadi's exceptional customer service and prompt delivery of parts have consistently exceeded my expectations, making them my top choice for all my automotive needs.
                             </p>
                         </div>
                     </div>  
