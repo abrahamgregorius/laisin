@@ -22,42 +22,44 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <table class="table">
-                <thead>
-                   <tr>
-                    <td>
-                        ID
-                    </td>
-                    <td>
-                        Product Name
-                    </td>
-                    <td>
-                        Part Number
-                    </td>
-                    <td>
-                        Description
-                    </td>
-                    <td>
-                        Brand
-                    </td>
-                    <td>
-                        Car Year
-                    </td>
-                   </tr>
-                </thead>
-                <tbody>
-                    @foreach ($products as $product)
-                    <tr>
-                        <td>{{ $product->id }}</td>
-                        <td><a href="{{ route('show.product', $product->id) }}">{{ $product->name }}</a></td>
-                        <td>{{ $product->part_number }}</td>
-                        <td>{{ $product->description }}</td>
-                        <td>{{ $product->brand->brand_name }}</td>
-                        <td>{{ $product->car_year }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                       <tr>
+                        <td>
+                            ID
+                        </td>
+                        <td>
+                            Product Name
+                        </td>
+                        <td>
+                            Part Number
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Brand
+                        </td>
+                        <td>
+                            Car Year
+                        </td>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($products as $product)
+                        <tr>
+                            <td>{{ $product->id }}</td>
+                            <td><a href="{{ route('show.product', $product->id) }}">{{ $product->name }}</a></td>
+                            <td>{{ $product->part_number }}</td>
+                            <td>{{ $product->description }}</td>
+                            <td>{{ $product->brand->brand_name }}</td>
+                            <td>{{ $product->car_year }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
