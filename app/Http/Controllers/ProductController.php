@@ -111,12 +111,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
         $data = Product::findOrFail($id);
         $slug = $data->slug;
 
         $validator = Validator::make($request->all(), [
-            'product_name' => ['required'],
+            'name' => ['required'],
             'part_number' => ['required'],
             'description' => ['nullable'],
             'brand_id' => ['required'],

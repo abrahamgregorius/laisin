@@ -25,7 +25,7 @@
                             ID
                         </td>
                         <td>
-                            Product Name
+                            Production ID
                         </td>
                         <td>
                             Part Number

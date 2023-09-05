@@ -12,7 +12,7 @@
                 <form action="{{ route('edit.product', $data->id) }}" method="POST" enctype="multipart/form-data" >
                     @csrf
                     {{-- Name --}}
-                    <label for="product_name" class="form-label">Product Name</label>
+                    <label for="product_name" class="form-label">Production ID</label>
                     <input autocomplete="off" value="{{ $data->name }}" type="text" name="name" class="form-control" placeholder="Type Product Name Here">
                     
                     {{-- Part number --}}

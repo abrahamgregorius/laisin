@@ -16,7 +16,7 @@
                 @endif
             </div>
             <div class="product product-name">
-                <p>Product Name</p>
+                <p>Production ID</p>
                 <h4>{{ $data->name }}</h4>
             </div>
             <div class="product product-part-number">
