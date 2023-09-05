@@ -43,7 +43,7 @@ Route::post('/contacts', [FormController::class, 'store'])->name('contacts.store
 
 
 // Route admin
-Route::prefix('/4dm1n')->group(function(){
+Route::prefix('/admin')->group(function(){
     Auth::routes();
     Route::middleware(['auth'])->group(function() {
         // Admin page
