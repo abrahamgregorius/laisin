@@ -75,7 +75,7 @@
         @yield('content')
     </main>
     
-    {{-- @vite([
+    @vite([
         'resources/js/laisin-js/confirmdelete.js',
         'resources/js/laisin-js/contact.js',
         'resources/js/laisin-js/hamburger.js',
@@ -87,7 +87,7 @@
         'resources/js/laisin-js/sweetalert.all.js',
         'resources/js/app.js',
         'resources/js/bootstrap.js',
-        ]) --}}
+        ])
 
     @include('layout.components.footer') 
 </body>
