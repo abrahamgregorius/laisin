@@ -180,8 +180,8 @@
                         <div class="testi-description">
                             <h5>Faris Sanjaya</h5>
                             <p>
-                                Laisindo Anugerah's exceptional customer service and prompt delivery of parts have consistently exceeded my expectations, making them my top choice for all my automotive needs.
-                            </p>
+
+                                Exceptional customer service and swift part delivery by Laisindo Anugerah always make them my top automotive pick.                            </p>
                         </div>
                     </div>  
                   </div>
