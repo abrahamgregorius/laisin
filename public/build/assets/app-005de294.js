@@ -1,0 +1,1 @@
+require("./laisin-js/confirmdelete.js");require("./laisin-js/contact.js");require("./laisin-js/hamburger.js");require("./laisin-js/laisin-admin.js");require("./laisin-js/laisin-chart.js");require("./laisin-js/laisin-product.js");require("./laisin-js/laisin-uploadfile.js");require("./laisin-js/live-search.js");require("./laisin-js/sweetalert.all.js");require("./bootstrap");

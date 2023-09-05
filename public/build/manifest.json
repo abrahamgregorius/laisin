@@ -5,9 +5,54 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-0d5829b5.js",
+    "file": "assets/app-005de294.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/laisin-js/confirmdelete.js": {
+    "file": "assets/confirmdelete-27df3614.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/confirmdelete.js"
+  },
+  "resources/js/laisin-js/contact.js": {
+    "file": "assets/contact-163cf15f.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/contact.js"
+  },
+  "resources/js/laisin-js/hamburger.js": {
+    "file": "assets/hamburger-4399b4c2.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/hamburger.js"
+  },
+  "resources/js/laisin-js/laisin-admin.js": {
+    "file": "assets/laisin-admin-bea6212c.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/laisin-admin.js"
+  },
+  "resources/js/laisin-js/laisin-chart.js": {
+    "file": "assets/laisin-chart-9c444b35.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/laisin-chart.js"
+  },
+  "resources/js/laisin-js/laisin-product.js": {
+    "file": "assets/laisin-product-8b6ef04c.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/laisin-product.js"
+  },
+  "resources/js/laisin-js/laisin-uploadfile.js": {
+    "file": "assets/laisin-uploadfile-15bdda82.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/laisin-uploadfile.js"
+  },
+  "resources/js/laisin-js/live-search.js": {
+    "file": "assets/live-search-89d6d36f.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/live-search.js"
+  },
+  "resources/js/laisin-js/sweetalert.all.js": {
+    "file": "assets/sweetalert.all-77d9f9c9.js",
+    "isEntry": true,
+    "src": "resources/js/laisin-js/sweetalert.all.js"
   },
   "resources/sass/app.scss": {
     "file": "assets/app-71455456.css",

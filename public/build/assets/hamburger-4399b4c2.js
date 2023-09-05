@@ -1,0 +1,1 @@
+const o=document.querySelector(".hamburger"),r=document.querySelector(".mobile-nav"),t=document.querySelectorAll(".hamburger-toggle"),c=document.querySelector(".close-mobile-nav"),e=()=>{r.classList.toggle("slide"),t.forEach(l=>l.classList.toggle("hide"))};o.addEventListener("click",e),c.addEventListener("click",e);
