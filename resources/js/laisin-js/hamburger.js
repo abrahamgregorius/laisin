@@ -3,5 +3,8 @@ const hamburger = document.querySelector(".hamburger"),
     hamburgerToggle = document.querySelectorAll(".hamburger-toggle"),
     closeMobileNav = document.querySelector(".close-mobile-nav"),
     toggleMobileNav = () => { mobileNav.classList.toggle("slide"), hamburgerToggle.forEach(e => e.classList.toggle("hide")) };
-hamburger.addEventListener("click", toggleMobileNav), closeMobileNav.addEventListener("click", toggleMobileNav);
+hamburger.addEventListener("click", toggleMobileNav), closeMobileNav.addEventListener("click", () => {
+    toggleMobileNav()
+    console.log('hamburger clicked')
+});
 console.log('hamburger loaded')
