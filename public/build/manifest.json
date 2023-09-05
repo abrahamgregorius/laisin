@@ -2,6 +2,11 @@
   "_axios-e636b08d.js": {
     "file": "assets/axios-e636b08d.js"
   },
+  "public/assets/year-picker/yearpicker.js": {
+    "file": "assets/yearpicker-9771f61c.js",
+    "isEntry": true,
+    "src": "public/assets/year-picker/yearpicker.js"
+  },
   "resources/css/app.css": {
     "file": "assets/app-db32aa1f.css",
     "isEntry": true,

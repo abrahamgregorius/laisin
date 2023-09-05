@@ -85,8 +85,8 @@
         'resources/js/laisin-js/laisin-product.js',
         'resources/js/laisin-js/contact.js',
         'resources/js/laisin-js/laisin-uploadfile.js',
-        'resources/js/laisin-js/laisin-chart.js',
-        'resources/js/laisin-js/laisin-admin.js',
+        // 'resources/js/laisin-js/laisin-chart.js',
+        // 'resources/js/laisin-js/laisin-admin.js',
         'resources/js/app.js',
         'resources/js/bootstrap.js',
         ])
