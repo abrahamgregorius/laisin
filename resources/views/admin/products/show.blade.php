@@ -36,7 +36,7 @@
                 <h4><a href="{{ route('show.category',$data->category->slug)}}">{{ $data->category->name }}</a></h4>
             </div>
             <div class="product product-car-year">
-                <p>Car Year</p>
+                <p>Car</p>
                 <h4>{{ $data->car_year }}</h4>
             </div>
             

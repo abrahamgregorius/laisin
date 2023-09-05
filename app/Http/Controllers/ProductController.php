@@ -115,6 +115,22 @@ class ProductController extends Controller
         $data = Product::findOrFail($id);
         $slug = $data->slug;
 
+        $validator = Validator::make($request->all(), [
+            'product_name' => ['required'],
+            'part_number' => ['required'],
+            'description' => ['nullable'],
+            'brand_id' => ['required'],
+            'category_id' => ['required'],
+            'car_year' => ['nullable'],
+            'thumbnail' => ['nullable'],
+        ]);
+
+        if ($validator->fails()) {
+            $messages = $validator->errors()->all();
+            Alert::error('Field incorrect', implode( " ", $messages));
+            return back();
+        }
+
 
         if($request->hasFile('thumbnail')){
             FacadesFile::delete(public_path("images/$slug/image.png"));

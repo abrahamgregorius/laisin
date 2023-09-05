@@ -37,7 +37,7 @@
                             Brand
                         </td>
                         <td>
-                            Car Year
+                            Car
                         </td>
                         <td>
                             Action

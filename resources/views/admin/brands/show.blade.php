@@ -26,7 +26,7 @@
                                 <th>Part Number</th>
                                 <th>Category</th>
                                 <th>Car Brand</th>
-                                <th>Car Year</th>
+                                <th>Car</th>
                             </tr>
                         </thead>
                         <tbody id="product-homepage-data">

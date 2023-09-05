@@ -18,7 +18,7 @@
                     {{-- Part number --}}
                     <div class="mb-2"></div>
                     <label for="part_number" class="form-label">Part Number</label>
-                    <input autocomplete="off" value="{{ $data->part_number }}" type="number" name="part_number" class="form-control" placeholder="Type Part Number Here">
+                    <input autocomplete="off" value="{{ $data->part_number }}" type="text" name="part_number" class="form-control" placeholder="Type Part Number Here">
                     
                     {{-- Description --}}
                     <div class="mb-2"></div>
@@ -47,7 +47,7 @@
                     
                     
                     <div class="mb-2"></div>
-                    <label for="year">Car Year</label>
+                    <label for="year">Car</label>
                     <input type="text" name="car_year" value="{{ $data->car_year }}" class="form-control">
                     
                     {{-- Thumbnail upload --}}

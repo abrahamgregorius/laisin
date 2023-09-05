@@ -42,7 +42,7 @@
                             Brand
                         </td>
                         <td>
-                            Car Year
+                            Car
                         </td>
                        </tr>
                     </thead>

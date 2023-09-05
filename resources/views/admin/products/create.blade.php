@@ -17,7 +17,7 @@
                     {{-- Part number --}}
                     <div class="mb-2"></div>
                     <label for="part_number" class="form-label">Part Number</label>
-                    <input autocomplete="off" type="text    " name="part_number" class="form-control" placeholder="Type Part Number Here">
+                    <input autocomplete="off" type="text" name="part_number" class="form-control" placeholder="Type Part Number Here">
                     
                     {{-- Description --}}
                     <div class="mb-2"></div>
@@ -42,10 +42,10 @@
                         @endforeach
                     </select>
 
-                    {{-- Car year --}}
+                    {{-- Car --}}
                     <div class="mb-2"></div>
-                    <label for="year">Car Year</label>
-                    <input id="yearpicker" type="number" name="car_year" class="form-control">
+                    <label for="year">Car</label>
+                    <input id="" type="text" name="car_year" class="form-control">
                     
                     
                     {{-- Thumbnail upload --}}
