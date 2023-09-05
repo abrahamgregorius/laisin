@@ -1,4 +1,7 @@
 {
+  "_axios-e636b08d.js": {
+    "file": "assets/axios-e636b08d.js"
+  },
   "public/assets/year-picker/yearpicker.js": {
     "file": "assets/yearpicker-9771f61c.js",
     "isEntry": true,
@@ -10,12 +13,18 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-4ed993c7.js",
+    "file": "assets/app-feae1c88.js",
+    "imports": [
+      "_axios-e636b08d.js"
+    ],
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/bootstrap.js": {
-    "file": "assets/bootstrap-c1097373.js",
+    "file": "assets/bootstrap-1fca39fb.js",
+    "imports": [
+      "_axios-e636b08d.js"
+    ],
     "isEntry": true,
     "src": "resources/js/bootstrap.js"
   },
