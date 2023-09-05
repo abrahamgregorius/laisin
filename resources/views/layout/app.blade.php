@@ -76,8 +76,8 @@
     </main>
     
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     @vite([
-        'resources/js/laisin-js/jquery.js',
         'resources/js/laisin-js/live-search.js',
         'resources/js/laisin-js/hamburger.js',
         'resources/js/laisin-js/laisin-product.js',

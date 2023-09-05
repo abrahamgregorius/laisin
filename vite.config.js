@@ -9,7 +9,6 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/sass/app.scss',
-                'resources/js/laisin-js/jquery.js',
                 'resources/js/laisin-js/live-search.js',
                 'resources/js/laisin-js/hamburger.js',
                 'resources/js/laisin-js/laisin-product.js',
