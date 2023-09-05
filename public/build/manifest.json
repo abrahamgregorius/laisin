@@ -13,7 +13,7 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-2a85a65b.js",
+    "file": "assets/app-956af2c1.js",
     "imports": [
       "_axios-e636b08d.js"
     ],
@@ -39,7 +39,7 @@
     "src": "resources/js/laisin-js/contact.js"
   },
   "resources/js/laisin-js/hamburger.js": {
-    "file": "assets/hamburger-4399b4c2.js",
+    "file": "assets/hamburger-dc33ff4f.js",
     "isEntry": true,
     "src": "resources/js/laisin-js/hamburger.js"
   },
