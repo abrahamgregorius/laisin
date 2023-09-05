@@ -18,7 +18,7 @@ export default defineConfig({
                 'resources/js/laisin-js/laisin-uploadfile.js',
                 'resources/js/laisin-js/live-search.js',
                 'resources/js/laisin-js/sweetalert.all.js',
-                'resources/js/bootstrap.js',        
+                'resources/js/bootstrap.js',
                 // Kalo misalnya ada file css/js yg
                 // gk mau dimasukin bareng dengan
                 // app.css atau app.js

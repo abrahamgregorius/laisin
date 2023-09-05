@@ -9,6 +9,11 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-c1097373.js",
+    "isEntry": true,
+    "src": "resources/js/bootstrap.js"
+  },
   "resources/js/laisin-js/confirmdelete.js": {
     "file": "assets/confirmdelete-27df3614.js",
     "isEntry": true,
