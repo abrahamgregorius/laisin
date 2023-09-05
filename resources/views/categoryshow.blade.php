@@ -44,7 +44,7 @@
                     By Car Brands
                 </div>
             </a>
-            <a href="{{ route('brands.years') }}" class="options-category">
+            {{-- <a href="{{ route('brands.years') }}" class="options-category">
                 <div class="wrappers-options-category">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f8470a" class="bi bi-calendar2-check" viewBox="0 0 16 16">
                         <path d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -53,7 +53,7 @@
                       </svg>
                     By Car Year
                 </div>
-            </a>
+            </a> --}}
         </div>
         <div class="laisin-search">
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8e99a4;" class="bi bi-search" viewBox="0 0 16 16">
