@@ -78,7 +78,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'brand_id' => $request->brand_id,
             'category_id' => $request->category_id,
-            'car_year' => $request->car_year,
+            'car_year' => $request->car_year ?? "-",
             'thumbnail' => "/images/$slug/image.png",
         ]);
       

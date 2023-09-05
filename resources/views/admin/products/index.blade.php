@@ -34,10 +34,10 @@
                             Description
                         </td>
                         <td>
-                            Brand
+                            Car Brand
                         </td>
                         <td>
-                            Car
+                            Car Year
                         </td>
                         <td>
                             Action

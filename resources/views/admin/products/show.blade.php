@@ -28,7 +28,7 @@
                 <h4>{{ $data->description }}</h4>
             </div>
             <div class="product product-brand">
-                <p>Brand</p>
+                <p>Car Brand</p>
                 <h4><a href="{{ route('show.brand',$data->brand->id) }}">{{ $data->brand->brand_name }}</a></h4>
             </div>
             <div class="product product-car-year">
@@ -36,7 +36,7 @@
                 <h4><a href="{{ route('show.category',$data->category->slug)}}">{{ $data->category->name }}</a></h4>
             </div>
             <div class="product product-car-year">
-                <p>Car</p>
+                <p>Car Year</p>
                 <h4>{{ $data->car_year }}</h4>
             </div>
             

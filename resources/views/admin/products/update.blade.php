@@ -37,7 +37,7 @@
 
                     {{-- Brand ID --}}
                     <div class="mb-2"></div>
-                    <label for="brand_id" class="form-label">Brand ID</label>
+                    <label for="brand_id" class="form-label">Car Brand</label>
                     <select class="form-control" name="brand_id">
                         <option selected>-- SELECT BRAND --</option>
                         @foreach ($brands as $brand)
@@ -45,10 +45,10 @@
                         @endforeach
                     </select>
                     
-                    
+                    {{-- Car Year --}}
                     <div class="mb-2"></div>
-                    <label for="year">Car</label>
-                    <input type="text" name="car_year" value="{{ $data->car_year }}" class="form-control">
+                    <label for="year">Car Year</label>
+                    <input type="text" id="yearpicker" name="car_year" autocomplete="off" value="{{ $data->car_year }}" class="form-control">
                     
                     {{-- Thumbnail upload --}}
                     <div class="mb-2"></div>

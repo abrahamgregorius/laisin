@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->foreignId('brand_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->integer('car_year')->nullable();
+            $table->string('car_year')->nullable();
             $table->text('thumbnail')->nullable();
             $table->timestamps();
         });
