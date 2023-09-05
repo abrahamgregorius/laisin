@@ -1,0 +1,7 @@
+import './resources/js/laisin-js/sweetalert.all.js'
+import './public/assets/year-picker/yearpicker.js'
+import './resources/js/laisin-js/confirmdelete.js'
+import './resources/js/laisin-js/laisin-chart.js'
+import './resources/js/laisin-js/live-search.js'
+import './resources/js/laisin-js/laisin-admin.js'
+import './resources/js/laisin-js/laisin-uploadfile.js'

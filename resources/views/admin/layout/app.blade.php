@@ -130,8 +130,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://kit.fontawesome.com/1426d21c51.js" crossorigin="anonymous"></script>
 @vite([
-  'public/assets/year-picker/yearpicker.js',
   'resources/js/laisin-js/sweetalert.all.js',
+  'public/assets/year-picker/yearpicker.js',
   'resources/js/laisin-js/confirmdelete.js',
   'resources/js/laisin-js/laisin-chart.js',
   'resources/js/laisin-js/live-search.js',
