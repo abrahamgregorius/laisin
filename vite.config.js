@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+                'resources/js/laisin-js/sweetalert.all.js',
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/sass/app.scss',
@@ -17,7 +18,6 @@ export default defineConfig({
                 'resources/js/laisin-js/laisin-chart.js',
                 'resources/js/laisin-js/laisin-uploadfile.js',
                 'resources/js/laisin-js/confirmdelete.js',
-                'resources/js/laisin-js/sweetalert.all.js',
                 'resources/js/bootstrap.js',
                 'public/assets/year-picker/yearpicker.js'
                 // Kalo misalnya ada file css/js yg
