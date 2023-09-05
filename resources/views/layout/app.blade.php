@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laisindo Autoparts</title>
+    <meta name="description" content="Laisindo Autoparts is a leading company specializing in the production of high-quality and durable spare parts for cars. From brakes to engines and suspensions, our products are designed to exceed industry standards and ensure optimal performance for your vehicle. Explore our wide range of reliable autoparts today.">
     <meta name="_token" content="{!! csrf_token() !!}" />
     {{-- <link rel="stylesheet" href="{{ asset('laisin-css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('laisin-css/products.css') }}">
