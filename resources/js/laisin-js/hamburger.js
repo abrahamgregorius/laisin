@@ -23,4 +23,3 @@ closeMobileNav.addEventListener("click", () => {
 });
 
 console.log('hamburger loaded')
-
