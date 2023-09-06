@@ -54,7 +54,7 @@ class ProductController extends Controller
         
         $validator = Validator::make($request->all(), [
             'product_name' => ['required'],
-            'part_number' => ['required', 'unique:products,part_number'],
+            'part_number' => ['required'],
             'description' => ['nullable'],
             'brand_id' => ['required'],
             'category_id' => ['required'],
