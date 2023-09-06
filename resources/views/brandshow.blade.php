@@ -89,7 +89,7 @@
                                 <td>{{ $product->part_number }}</td>
                                 <td><a href="{{ route('categories.show',$product->category->slug)  }}">{{ $product->category->name }}</a></td>
                                 <td><a href="{{ route('brands.show',$product->brand->slug) }}">{{ $product->brand->brand_name }}</a></td>
-                                <td><a href="{{ route('year.detail', $product->car_year) }}">{{ $product->car_year }}</a></td>
+                                <td>{{ $product->car_year }}</td>
                             </tr>
                         @endforeach
                     </tbody>
