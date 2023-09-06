@@ -68,6 +68,7 @@
                         <th>Category</th>
                         <th>Car Brand</th>
                         <th>Car Year</th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody id="product-homepage-data">
@@ -78,6 +79,7 @@
                             <td><a href="/products/category/{{ $product->category->slug }}">{{ $product->category->name }}</a></td>
                             <td><a href="/products/brand/{{ $product->brand->slug }}">{{ $product->brand->brand_name }}</a></td>
                             <td>{{ $product->car_year }}</td>
+                            <td>{{ $product->description }}</td>
                         </tr>
                         @endforeach
                     </tbody>

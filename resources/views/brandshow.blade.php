@@ -80,6 +80,7 @@
                             <th>Category</th>
                             <th>Car Brand</th>
                             <th>Car</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody id="brand-detail-data">
@@ -90,6 +91,7 @@
                                 <td><a href="{{ route('categories.show',$product->category->slug)  }}">{{ $product->category->name }}</a></td>
                                 <td><a href="{{ route('brands.show',$product->brand->slug) }}">{{ $product->brand->brand_name }}</a></td>
                                 <td>{{ $product->car_year }}</td>
+                                <td>{{ $product->description }}</td>
                             </tr>
                         @endforeach
                     </tbody>
