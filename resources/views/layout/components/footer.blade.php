@@ -39,19 +39,19 @@
                         Toyota
                     </a>
                 </li>
+                <li class="menu-link">
+                   <a href="/products/brand/suzuki">
+                       Suzuki
+                   </a>
+               </li>
+                <li class="menu-link">
+                   <a href="/products/brand/mitsubishi">
+                       Mitsubishi
+                   </a>
+               </li>
                  <li class="menu-link">
-                    <a href="/products/brand/chevrolet">
-                        Chevrolet
-                    </a>
-                </li>
-                 <li class="menu-link">
-                    <a href="/products/brand/nissan">
-                        Nissan
-                    </a>
-                </li>
-                 <li class="menu-link">
-                    <a href="/products/brand/honda">
-                        Honda
+                    <a href="/products/brand/isuzu">
+                        Isuzu
                     </a>
                 </li>
                 </ul>
