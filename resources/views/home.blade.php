@@ -4,7 +4,7 @@
 
 {{-- No shadow hero --}}
 <div class="laisin-hero">
-    <img src="{{ asset('hometruck.png') }}" alt="hero">
+    <img src="{{ asset('assets/image.webp') }}" alt="hero">
     <div class="hero-text">
         <h1>Laisindo Autoparts</h1>
         <p>Welcome to Laisindo Autoparts – your trusted source for premium automotive solutions. Find genuine parts and expert advice to keep your vehicles running smoothly. Elevate your driving experience with us.</p>
@@ -88,7 +88,7 @@
         <div class="about-us-wrappers row">
             <div class="wrappers-left col-md-6">
                 <div class="img">
-                    <img src="{{ asset('images/hometruck.png') }}" alt="">
+                    <img src="https://imageupload.io/ib/IqxIkveWkBOZ9ba_1694493377.jpeg" alt="">
                 </div>
             </div>
             <div class="wrappers-right col-md-6">
