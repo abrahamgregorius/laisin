@@ -88,7 +88,7 @@
         <div class="about-us-wrappers row">
             <div class="wrappers-left col-md-6">
                 <div class="img">
-                    <img src="https://autoimage.templines.info/wp-content/uploads/2018/10/g01.jpg" alt="">
+                    <img src="{{ asset('images/hometruck.png') }}" alt="">
                 </div>
             </div>
             <div class="wrappers-right col-md-6">
