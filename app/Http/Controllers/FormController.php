@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\Models\Form;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class FormController extends Controller
@@ -18,7 +20,6 @@ class FormController extends Controller
 
     public function admin_index(Form $form) {
         $forms = Form::get();
-       
         return view('admin.forms.index', compact('forms'));
     }
    
@@ -42,15 +43,15 @@ class FormController extends Controller
      */
     public function store(Request $request)
     { 
-  
-            Form::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'message' => $request->message
-            ]);
+        $form = Form::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message
+        ]);
         
     
-
+        Mail::to(env('MAIL_RECEIVER'))
+        ->send(new ContactMail($form));
         return redirect('/contacts')->with('message','We greatly appreciate you taking the time to get in touch with us. Your message has been received, and we will review it as soon as possible.');
     }
 
