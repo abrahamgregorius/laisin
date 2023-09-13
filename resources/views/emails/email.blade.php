@@ -7,8 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    {{ $form->name }}
-    {{ $form->email }}
-    {{ $form->message }}
+
+    <table>
+            <tr>
+                <th>Sender</th>
+                <td>{{ $form->name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ $form->email }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ $form->message }}</td>
+            </tr>
+    </table>
+
 </body>
 </html>
