@@ -50,7 +50,7 @@ class FormController extends Controller
         ]);
         
     
-        Mail::to('athioii6@gmail.com')
+        Mail::to(env('MAIL_RECEIVER'))
         ->send(new ContactMail($form));
         return redirect('/contacts')->with('message','We greatly appreciate you taking the time to get in touch with us. Your message has been received, and we will review it as soon as possible.');
     }
