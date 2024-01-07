@@ -88,7 +88,7 @@
         <div class="about-us-wrappers row">
             <div class="wrappers-left col-md-6">
                 <div class="img">
-                    <img src="https://i.ibb.co/BTbnkSX/hometruck.png" alt="">
+                    <img src="https://i.ibb.co/4P1S6vH/49b7f0b9-1e77-4f28-b5f9-bca2bd446903.png" alt="">
                 </div>
             </div>
             <div class="wrappers-right col-md-6">
